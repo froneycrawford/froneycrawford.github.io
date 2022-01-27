@@ -82,11 +82,11 @@ analytics:
 author:
   name             : "Fronefield Crawford"
   avatar           : "froney_grandcanyon1.jpg"
-  bio              : "bio goes here"
-  location         : "location goes here"
+  bio              : "Professor of Astronomy"
+  location         : "Franklin and Marshall College"
   employer         :
   #pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  #googlescholar    : "http://yourfullgooglescholarurl.com"
+  googlescholar    : "https://scholar.google.com/citations?user=VxD-1ywAAAAJ&hl=en"
   email            : "fcrawfor&#064fandm.edu"
   #researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
