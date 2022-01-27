@@ -82,9 +82,9 @@ analytics:
 author:
   name             : "Fronefield Crawford"
   avatar           : "froney_grandcanyon1square.jpg"
-  bio              : "Professor of Astronomy"
-  location         : "Franklin and Marshall College <br> P.O.Box 3003"
-  employer         :
+  bio              : "Professor of Astronomy <br> Franklin and Marshall College"
+  location         : "Franklin and Marshall College <br> Department of Physics and Astronomy </br> P.O. Box 3003 <br> Lancaster, PA 17604 <br> USA"
+  employer         : "Franklin and Marshall College" 
   #pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?user=VxD-1ywAAAAJ&hl=en"
   email            : "fcrawfor&#064fandm.edu"
@@ -102,7 +102,7 @@ author:
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         : https://www.linkedin.com/in/fronefield-crawford-iii-47074311
+  linkedin         : "https://www.linkedin.com/in/fronefield-crawford-iii-47074311"
   orcid            : "http://orcid.org/0000-0002-2578-0360"
   pinterest        :
   soundcloud       :
