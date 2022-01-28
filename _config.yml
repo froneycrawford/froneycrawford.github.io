@@ -82,9 +82,9 @@ analytics:
 author:
   name             : "Fronefield Crawford"
   avatar           : "froney_grandcanyon1square.jpg"
-  bio              : "Professor of Astronomy <br> Chair of Physics and Astronomy Department <br> Director of Grundy Observatory <br> Franklin and Marshall College"
-  location         : "Mailing Address: <br> Department of Physics and Astronomy </br> Franklin and Marshall Colege <br> P.O. Box 3003 <br> Lancaster, PA 17604-3003"
-  employer         : "Office: Hackman 200 <br> Phone: 717-358-4499 <br> Email: fcrawfor&#064fandm.edu"
+  bio              : "Professor of Astronomy <br> Chair, Physics and Astronomy Department <br> Director of Grundy Observatory"
+  location         : "<b>Mailing Address</b> <br> Department of Physics and Astronomy </br> Franklin and Marshall Colege <br> P.O. Box 3003 <br> Lancaster, PA 17604-3003"
+  employer         : "<b>Contact Information</b> <br> Office: Hackman 200 <br> Phone: 717-358-4499 <br> Email: fcrawfor&#064fandm.edu"
   #pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?user=VxD-1ywAAAAJ&hl=en"
   email            : 
