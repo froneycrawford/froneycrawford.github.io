@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-Froney Crawford's Home page at Franklin and Marshall College can be found <a href=http://venus.fandm.edu>here</a>.
+Froney Crawford's Home page at Franklin and Marshall College can be found [here](http://venus.fandm.edu).
 
 A data-driven personal website
 ======
