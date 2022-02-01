@@ -14,7 +14,7 @@ Froney Crawford's Home page at Franklin and Marshall College can be found [here]
 Mailing Address
 ======
 
-Department of Physics and Astronomy
+Department of Physics and Astronomy <br>
 Franklin and Marshall Colege
 P.O. Box 3003
 Lancaster, PA 17604-3003
