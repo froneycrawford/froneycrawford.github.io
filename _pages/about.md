@@ -15,15 +15,15 @@ Mailing Address
 ======
 
 Department of Physics and Astronomy <br>
-Franklin and Marshall Colege
-P.O. Box 3003
+Franklin and Marshall Colege <br>
+P.O. Box 3003 <br>
 Lancaster, PA 17604-3003
 
 Contact Information
 ======
 
-Office: Hackman 200
-Phone: 717-358-4499
+Office: Hackman 200 <br>
+Phone: 717-358-4499 <br>
 Email: fcrawfor@fandm.edu
 
 Research
