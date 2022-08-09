@@ -22,7 +22,7 @@ Lancaster, PA 17604-3003
 Contact Information
 ======
 
-Office: Hackman 200 <br>
+Office: Hackman 421 <br>
 Phone: 717-358-4499 <br>
 Email: fcrawfor@fandm.edu
 
