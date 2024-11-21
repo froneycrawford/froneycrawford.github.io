@@ -1,0 +1,101 @@
+Good luck to everyone on the final exam! 
+
+Here are the answers to most of the practice handouts I gave you in
+class:
+
+Practice exam question for Ch. 9: 
+1) conservation of energy; fluid incompressible/continuity equation
+2) f = 1 - rho_ice/rho_water = 0.90 and 0.92
+3) if v goes up, then P goes down (Bernoulli) 
+
+Practice exam question for Ch. 12, 13: 
+a) 1.1 atm
+b) 9.2 kg
+c) 2075 J
+d) 30.2 liter
+e) 3735 J
+f) 4980 J, some Q went into W
+
+Practice exam question for Ch. 14: 
+a) 3.34e5 kJ 
+b) 8.8
+c) 3.8e4 kJ
+d) 440 W
+e) -1.22e6 J/K 
+f) +1.22e6 J/K 
+g) eta < 8.8, W goes up, and delta S goes up in (f) 
+
+Practice exam question for Ch. 26: 
+1) see class notes for this example
+2) 0.89c
+3) 75 min
+
+Ch. 14 - practice material: 
+1) isobaric = horizontal line
+2) isochoric = vertical line
+3) isothermal = P = 1/V 
+4) adiabatic = P = 1/V^{gamma} 
+
+Activity - entropy flow:
+delta S1 = +16 J/K 
+delta S2 = 0
+delta S3 = -16 J/K 
+delta S4 = 0 
+Plot - looks like rectangle, delta S_tot = 0, reversible
+area enclosed = net work
+heat leak - area changes 
+
+Final Exam from 2001: 
+I-1) rigid bottle, delta V = 0; full Carnot cycle, net work = 0
+I-2) see me for diagram 
+I-3) F_B = const., mass of displaced water doesnt change
+I-4) 
+a) 0-1 sec; 3.5-4.5 sec
+b) +1.0 m/s^2
+c) 0
+d) 2.5-4.0 sec
+I-5)
+a) decrease, Q negative
+b) entropy of air goes up (S cannot decrease)
+II-1) 1 meter + 0.45 mm 
+II-2) 
+a) 1.01 sec
+b) 29.7 kg m/s 
+c) 1484 N 
+II-3)
+a) 1.21 M_E 
+b) 5% larger
+II-4) 
+a) 9.8e3 Pa
+b) 4.4 m/s
+II-5) 
+a) 122 K
+b) 872 m/s CORRECTED  
+II-6) 
+a) 44%
+b) 2273 J
+c) 1273 J
+II-7) 
+a) 4.3 m
+b) 2.3 sec/tick
+III-1) 
+a) W_AB = nRTln(V2/V1)
+   W_BC = -P1(V2 - V1) 
+   W_CA = 0
+b) W = W_AB + W_AC 
+c) Qin = W > 0 for AB; Qin = nRTln(V2/V1) 
+III-2)
+a) F,a = 0
+b) W = F r theta = 5.5 J
+c) KE = 11 J
+d) 14 Nm 
+e) 1.6 kg m^2
+f) 8.75 rad/s^2
+g) 0.43 sec
+h) 3.76 rad/s
+i) 11.3 J
+j) 6.0 kg m/s
+k) 8.2 rad/s 
+ 
+
+

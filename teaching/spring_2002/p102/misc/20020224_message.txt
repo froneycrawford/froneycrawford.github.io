@@ -1,0 +1,48 @@
+Two things:
+
+FIRST, an answer to the question regarding the energy in capacitors
+which plagued me during class and during this weekend. The question
+was how can the three expressions for energy U be consistent with each
+other when you change a feature of the plates (such as the area A)?
+
+What was confusing was what to do with charge Q in this case. For
+example: if you were to double area A of the plates, then you could
+either 1) keep charge Q the same, making charge density sigma half of
+its value, or 2) keep charge density sigma the same, thereby doubling
+Q.
+
+In case 1: Q stays the same. Electric field between plates E =
+sigma/e0, which equals half of the original field since sigma went
+down. V = Ed, so voltage V is half the original. Capacitance C =
+A*e0/d which is twice the original. Thus the energy U = 1/2*C*V^2 =
+1/2*Q^2/C = 1/2*Q*V = one half the original U. So that works OK. 
+
+In case 2: Q gets doubled. Electric field stays the same since sigma
+stays the same. V = Ed = the same as original. Capacitance C = A*e0/d
+is twice the original. So U is twice the original in each expression
+for U.
+
+You can do the same thing for increasing separation distance d and
+inserting dielectric and it also works out OK. Come talk to me if you
+want more clarification on this.
+
+SECOND, several of the homework problems for this week's problem set
+(PS #5) are challenging. In particular, Problems 3, 4, and 5. Here are
+some hints to help you get through these.
+
+Problem 3: you must treat this like a parallel plate capacitor where
+the curvature is negligible since the distance between plates is so
+small relative to the radius in the problem. Once you do this, you
+know an expression for C for this setup. Use this expression to get
+C/A which is capacitance per area.
+
+Problem 4: Use the C/A you got from the previous problem and recall
+that the surface charge density sigma = Q/A.
+
+Problem 5: Capacitance per unit length is C/l where l is length. You
+know an expression from before for C/A, and recall that the area of a
+cylinder of radius R and length l is A = 2*pi*R^2*l
+
+I hope that helps.  Come see me/call me/email me if you have
+questions.
+

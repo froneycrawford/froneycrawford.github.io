@@ -1,0 +1,14 @@
+There was a good question raised after class as to why there was a
+minus sign on front of the bulk modulus (B) but not in front of the
+Young's Modulus (Y). This has to do with the definition of which way
+the pressure is defined. For Young's modulus, the Delta P term on top
+refers to a stretching of the bar, so Delta L is positive (it gets
+bigger), giving a positive Y (I kept talking about compressing the
+bar, but I should have been talking about stretching it for
+clarity). For Bulk Modulus, when a pressure Delta P is applied to the
+liquid, it by definition pushes on it, thereby shrinking it and making
+the volume smaller (Delta V is negative here). So in this case a minus
+sign is placed in front of it to make B positive. The idea is that Y
+and B are always positive so that when you take the square root, you
+get a real value for the velocity.
+

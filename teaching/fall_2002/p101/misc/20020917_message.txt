@@ -1,0 +1,4 @@
+For your information, Equation 3.20 on page 97 in Hecht is wrong: it
+should not have that factor of two in it. See if you can get the right
+answer (without the factor of two) by putting in theta = 45 degrees in
+Equation 3.19.

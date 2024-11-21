@@ -1,0 +1,23 @@
+For the problem set this week (HW #4), you will need to do some
+reading on your own in the book about electric potential. In
+particular, study the section on the potential arising from point
+charges, which we did not cover in class today.
+
+Here are some hints on several of the tougher homework problems this
+seek:
+
+For problem #4, involving the charged hollow metal pipe, make a
+cylindrical Gaussian surface of length L (same as the pipe) at some
+arbitrary radial distance r < R_o. Use Gauss's law to determine what
+the E-field must be for any r < R_o. Then make the same Gaussian
+surface at r > R_o, and use Gauss's Law to compute the E-field for any
+r > R_o. Think about why I didn't make any mention of R_i in this
+hint.
+
+For problem #11, the uniformly charged ball, figure out the electric
+field (as a function of radius r) in the two regions r < R and r >
+R. Note that at r = R the E-field magnitudes should match up. In both
+cases, use a spherical Gaussian surface and Gauss's Law to figure out
+the E-field. Do the r > R case first since this is the easier of the
+two.
+

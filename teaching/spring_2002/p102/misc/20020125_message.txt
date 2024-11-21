@@ -1,0 +1,11 @@
+One of you had a good question about the difference in how I presented
+Hooke's Law (F = -kx) and how the book does it (F = ks). The
+difference is that in the book (p. 408), they think of F as the force
+required ON the spring the make it deform, whereas I think of F as the
+force exerted BY the spring once it is deformed (i.e., the restoring
+force). The difference is simply the direction, a minus sign (the
+magnitude is the same). Really, F is a vector with direction, as is x,
+but I left the vector signs off in the equation. Personally I think it
+is more helpful to think of them as vector opposites, since this comes
+in handy when you are doing problems and need to draw force diagrams
+and then balance forces, etc.

@@ -1,0 +1,46 @@
+Here are the answers I have for the practice problems for Midterm #2
+that I posted on the web:
+
+Physics and Forensics 
+c) 0.1 m/s right
+d) 19.5 J 
+
+Ch. 5 practice problem (i.e., problem #4 from a previous midterm #1
+involving disk on rotating platform):
+b) F_c = f_s = m {omega}^2 r
+c) 0.4 N 
+d) 0.43 
+
+Ch. 6 practice problem: 
+b) 31.9 m
+c) some KE goes to friction work, PE not as great, height is smaller
+d) 48.5 J, 2.2 N downward
+
+Ch. 7 practice problem: 
+1) deflected toward black side
+2) 0.01 m/s 
+3) poorly worded question; F = same, a is greater for car
+
+Ch. 8 practice problem: 
+a) 9.8e-5 rad/s^2 
+b) 1.2e-2 rad/s 
+c) 2.1 N
+d) 6.9e-5 rad
+e) v increases 
+
+Fall 2001 Midterm #2: 
+1.1) F perpendicular to ds, W = 0
+1.2) more work done on marble
+1.3) impulse is the same, ball has larger a 
+2.1) v_c = 3.1e3 m/s, much larger than v, orbit is elliptical
+2.2)
+a) 118.7 N
+b) 7.3 rad/s
+c) 3.2 rad/s 
+3.1)
+a) 57 kg m/s 
+b) 28 m/s 
+c) 2.75 m/s
+d) 756 J
+e) 0.11 rad/s 
+

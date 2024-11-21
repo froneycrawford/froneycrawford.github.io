@@ -1,0 +1,4088 @@
+%!PS-Adobe-3.0
+%%Title: (AIPS_Software_Package.pdf)
+%%Version: 1 2
+%%CreationDate: (D:20030224145224-05'00')
+%%DocumentData: Clean7Bit
+%%LanguageLevel: 2
+%%BoundingBox: 0 0 612 792
+%%Pages: 5
+%%DocumentProcessColors: (atend)
+%%DocumentNeededResources: (atend)
+%%DocumentSuppliedResources:
+%%+ procset (Adobe Acrobat - PDF operators) 1.2 0
+%%+ procset (Adobe Acrobat - type operators) 1.2 0
+%%+ procset (Adobe Acrobat - general image support) 1.2 0
+%%+ procset (Adobe Acrobat - monochrome image support) 1.2 0
+%%EndComments
+%%BeginDefaults
+%%EndDefaults
+%%BeginProlog
+%%EndProlog
+%%BeginSetup
+%%BeginResource: l2check
+%%Copyright: Copyright 1993 Adobe Systems Incorporated. All Rights Reserved.
+systemdict /languagelevel known
+{ systemdict /languagelevel get 1 eq }
+{ true }
+ifelse
+{
+initgraphics /Helvetica findfont 18 scalefont setfont
+72 600 moveto (Error: Your printer driver needs to be configured) dup show
+72 580 moveto (for printing to a PostScript Language Level 1 printer.) dup show
+exch = =
+/Helvetica-Bold findfont 16 scalefont setfont
+72 520 moveto (Windows and Unix) show
+/Times-Roman findfont 16 scalefont setfont
+72 500 moveto (Select ªLanguage Level 1º in the PostScript options section) show
+72 480 moveto (of the Acrobat print dialog.) show
+/Helvetica-Bold findfont 16 scalefont setfont
+72 440 moveto (Macintosh) show
+/Times-Roman findfont 16 scalefont setfont
+72 420 moveto (In the Chooser, select your printer driver.) show
+72 400 moveto (Then select your printer and click the Setup button.) show
+72 380 moveto (Follow any on-screen dialogs that may appear.) show
+showpage
+quit
+}
+if
+%%EndResource
+/currentpacking where{pop currentpacking true setpacking}if
+%%BeginResource: procset pdfvars
+%%Copyright: Copyright 1987-1999 Adobe Systems Incorporated. All Rights Reserved.
+%%Version: 4.0 2
+%%Title: definition of dictionary of variables used by PDF & PDFText procsets
+userdict /PDF 160 dict put
+userdict /PDFVars 86 dict dup begin put
+/_save 0 def
+/_cshow 0 def
+/InitAll 0 def
+/TermAll 0 def
+/DocInitAll 0 def
+/DocTermAll 0 def
+/_lp /none def
+/_doClip 0 def
+/sfc 0 def
+/_sfcs 0 def
+/_sfc 0 def
+/ssc 0 def
+/_sscs 0 def
+/_ssc 0 def
+/_fcs 0 def
+/_scs 0 def
+/_fp 0 def
+/_sp 0 def
+/AGM_MAX_CS_COMPONENTS 10 def
+/_fillColors [ 0 1 AGM_MAX_CS_COMPONENTS { array } for ] def
+/_strokeColors [ 0 1 AGM_MAX_CS_COMPONENTS { array } for ] def
+/_fc null def
+/_sc null def
+/DefaultGray [/DeviceGray] def
+/DefaultRGB [/DeviceRGB] def
+/DefaultCMYK [/DeviceCMYK] def
+/_inT false def
+/_tr -1 def
+/_rise 0 def
+/_ax 0 def
+/_cx 0 def
+/_ld 0 def
+/_tm matrix def
+/_ctm matrix def
+/_mtx matrix def
+/_hy (-) def
+/_fScl 0 def
+/_hs 1 def
+/_pdfEncodings 2 array def
+/_baselineadj 0 def
+/_fTzero false def
+/_Tj 0 def
+/_italMtx [1 0 .212557 1 0 0] def
+/_italMtx_WMode1 [1 -.212557 0 1 0 0] def
+/_italMtxType0 [1 0 .1062785 1 0 0] def
+/_italMtx_WMode1Type0 [1 -.1062785 0 1 0 0] def
+/_basefont 0 def
+/_basefonto 0 def
+/_pdf_oldCIDInit null def
+/_pdf_FontDirectory 30 dict def
+/_categories 10 dict def
+/_sa? true def
+/_op? false def
+/_OP? false def
+/_opmode 0 def
+/_ColorSep5044? false def
+/_tmpcolr? [] def
+/_tmpop? {} def
+/_processColors 0 def
+/_defaulttransfer currenttransfer def
+/_defaultflatness currentflat def
+/_defaulthalftone null def
+/_defaultcolortransfer null def
+/_defaultblackgeneration null def
+/_defaultundercolorremoval null def
+/_defaultcolortransfer null def
+end
+%%EndResource
+PDFVars begin PDF begin
+%%BeginResource: procset pdfutil
+%%Copyright: Copyright 1993-1999 Adobe Systems Incorporated. All Rights Reserved.
+%%Version: 4.0 2
+%%Title: Basic utilities used by other PDF procsets
+/bd {bind def} bind def
+/ld {load def} bd
+/bld {
+dup length dict begin
+{ null def } forall
+bind
+end
+def
+} bd
+/dd { PDFVars 3 1 roll put } bd
+/xdd { exch dd } bd
+/Level2?
+systemdict /languagelevel known
+{ systemdict /languagelevel get 2 ge } { false } ifelse
+def
+/Level3?
+systemdict /languagelevel known
+{systemdict /languagelevel get 3 eq } { false } ifelse
+def
+/getifknown {
+2 copy known { get true } { pop pop false } ifelse
+} bd
+/here {
+currentdict exch getifknown
+} bd
+/isdefined? { where { pop true } { false } ifelse } bd
+/StartLoad { dup dup not { /_save save dd } if } bd
+/EndLoad { if not { _save restore } if } bd
+%%EndResource
+%%BeginResource: procset pdf
+%%Version: 4.0 3
+%%Copyright: Copyright 1998-1999 Adobe Systems Incorporated. All Rights Reserved.
+%%Title: General operators for PDF, common to all Language Levels.
+[/b/B/b*/B*/BDC/BI/BMC/BT/BX/c/cm/cs/CS/d/d0/d1/Do/DP/EI/EMC/ET/EX/f/f*/g/G/gs
+/h/i/j/J/k/K/l/m/M/MP/n/q/Q/re/rg/RG/ri/s/S/sc/SC/scn/SCN/sg/Tc/Td/TD/Tf/Tj/TJ
+/TL/Tm/Tr/Ts/Tw/Tz/T*/v/w/W/W*/y/'/"
+/applyInterpFunc/applystitchFunc/domainClip/EF/encodeInput/gsDI/ilp/icl
+/initgs/int/limit/PS/rangeClip/RC/rf/makePat/csfamily 
+/? /! /| /: /+ /GetGlyphDirectory
+] {null def} bind forall
+/v { currentpoint 6 2 roll c } bd
+/y { 2 copy c } bd
+/h/closepath ld
+/d/setdash ld
+/j/setlinejoin ld
+/J/setlinecap ld
+/M/setmiterlimit ld
+/w/setlinewidth ld
+/i {
+dup 0 eq { pop _defaultflatness } if
+setflat
+} bd
+/gsDI {
+begin
+/OP here { /_OP? xdd } if
+/op here { /_op? xdd }
+{ /OP here { /_op? xdd } if }
+ifelse
+/OPM here { /_opmode xdd } if
+/Font here { aload pop Tf } if
+/LW here { w } if
+/LC here { J } if
+/LJ here { j } if
+/ML here { M } if
+/D here { aload pop d } if
+end
+} bd
+/ilp { /_lp /none dd } bd
+/icl { /_doClip 0 dd } bd
+/W { /_doClip 1 dd } bd
+/W* { /_doClip 2 dd } bd
+/n {
+{{} {clip} {eoclip}} _doClip get exec
+icl
+newpath
+} bd
+/s { h S } bd
+/B { q f Q S } bd
+/B* { q f* Q S } bd
+/b { h B } bd
+/b* { h B* } bd
+/q/save ld
+/Q { restore ilp } bd
+/GetCSFamily {
+dup type /arraytype eq {0 get} if
+} bd
+/GetCompsDict
+11 dict begin
+/DeviceGray { pop 1 } bd
+/DeviceRGB { pop 3 } bd
+/DeviceCMYK { pop 4 } bd
+/CIEBasedA { pop 1 } bd
+/CIEBasedABC { pop 3 } bd
+/CIEBasedDEF { pop 3 } bd
+/CIEBasedDEFG { pop 4 } bd
+/DeviceN { 1 get length } bd
+/Separation { pop 1 } bd
+/Indexed { pop 1 } bd
+/Pattern { pop 0 } bd
+currentdict
+end
+def
+/GetComps {
+GetCompsDict
+1 index GetCSFamily
+get exec
+} bd
+/cs
+{
+dup _fcs eq
+{ pop }
+{ dup /_fcs xdd
+GetComps
+_fillColors exch get
+/_fc xdd
+/_fp null dd
+} ifelse
+} bd
+/CS
+{
+dup _scs eq
+{ pop }
+{ dup /_scs xdd GetComps _strokeColors exch get /_sc xdd /_sp null dd }
+ifelse
+} bd
+/sc {
+_fc astore pop
+ilp
+} bd
+/SC {
+_sc astore pop
+ilp
+} bd
+/g { DefaultGray cs sc } bd
+/rg { DefaultRGB cs sc } bd
+/k { DefaultCMYK cs sc } bd
+/G { DefaultGray CS SC } bd
+/RG { DefaultRGB CS SC } bd
+/K { DefaultCMYK CS SC } bd
+/cm { _mtx astore concat } bd
+/re {
+4 2 roll m
+1 index 0 rlineto
+0 exch rlineto
+neg 0 rlineto
+h
+} bd
+/RC/rectclip ld
+/EF/execform ld
+/PS { cvx exec } bd
+/initgs {
+/DefaultGray [/DeviceGray] dd
+/DefaultRGB [/DeviceRGB] dd
+/DefaultCMYK [/DeviceCMYK] dd
+0 g 0 G
+[] 0 d
+0 j
+0 J
+10 M
+1 w
+true setSA
+/_op? false dd
+/_OP? false dd
+/_opmode 0 dd
+/_defaulttransfer load settransfer
+0 i
+/RelativeColorimetric ri
+newpath
+} bd
+/int {
+dup 2 index sub 3 index 5 index sub div 6 -2 roll sub mul
+exch pop add exch pop
+} bd
+/limit {
+dup 2 index le { exch } if pop
+dup 2 index ge { exch } if pop
+} bd
+/domainClip {
+Domain aload pop 3 2 roll
+limit
+} [/Domain] bld
+/applyInterpFunc {
+0 1 DimOut 1 sub
+{
+dup C0 exch get exch
+dup C1 exch get exch
+3 1 roll
+1 index sub
+3 index
+N exp mul add
+exch
+currentdict /Range_lo known
+{
+dup Range_lo exch get exch
+Range_hi exch get
+3 2 roll limit
+}
+{
+pop
+}
+ifelse
+exch
+} for
+pop
+} [/DimOut /C0 /C1 /N /Range_lo /Range_hi] bld
+/encodeInput {
+NumParts 1 sub
+0 1 2 index
+{
+dup Bounds exch get
+2 index gt
+{ exit }
+{ dup
+3 index eq
+{ exit }
+{ pop } ifelse
+} ifelse
+} for
+3 2 roll pop
+dup Bounds exch get exch
+dup 1 add Bounds exch get exch
+2 mul
+dup Encode exch get exch
+1 add Encode exch get
+int
+} [/NumParts /Bounds /Encode] bld
+/rangeClip {
+exch dup Range_lo exch get
+exch Range_hi exch get
+3 2 roll
+limit
+} [/Range_lo /Range_hi] bld
+/applyStitchFunc {
+Functions exch get exec
+currentdict /Range_lo known {
+0 1 DimOut 1 sub {
+DimOut 1 add -1 roll
+rangeClip
+} for
+} if
+} [/Functions /Range_lo /DimOut] bld
+%%EndResource
+%%BeginResource: procset pdflev2
+%%Version: 4.0 5
+%%Copyright: Copyright 1987-1999 Adobe Systems Incorporated. All Rights Reserved.
+%%LanguageLevel: 2
+%%Title: PDF operators, with code specific for Level 2
+/_defaulthalftone currenthalftone dd
+/_defaultblackgeneration currentblackgeneration dd
+/_defaultundercolorremoval currentundercolorremoval dd
+/_defaultcolortransfer [currentcolortransfer] dd
+/initialize {
+_defaulthalftone sethalftone
+/_defaultblackgeneration load setblackgeneration
+/_defaultundercolorremoval load setundercolorremoval
+_defaultcolortransfer aload pop setcolortransfer
+false setoverprint
+<</MaxFormItem 0>> setuserparams
+} bd
+/terminate { } bd
+/m/moveto ld
+/l/lineto ld
+/c/curveto ld
+/setSA/setstrokeadjust ld
+/defineRes/defineresource ld
+/findRes/findresource ld
+currentglobal
+true systemdict /setglobal get exec
+[/Function /ExtGState /Form /Shading /FunctionDictionary /MadePattern /PatternPrototype /DataSource]
+{ /Generic /Category findresource dup length dict copy /Category defineresource pop }
+forall
+systemdict /setglobal get exec
+/ri
+{
+/findcolorrendering isdefined?
+{
+mark exch
+findcolorrendering
+counttomark 2 eq
+{ type /booleantype eq
+{ dup type /nametype eq
+{ dup /ColorRendering resourcestatus
+{ pop pop
+dup /DefaultColorRendering ne
+{
+/ColorRendering findresource
+setcolorrendering
+} if
+} if
+} if
+} if
+} if
+cleartomark
+}
+{ pop
+} ifelse
+} bd
+/_sfcs {_fcs setcolorspace} bind dd
+/_sscs {_scs setcolorspace} bind dd
+/_sfc
+{
+_fc aload pop
+_fp null eq
+{ setcolor }
+{ _fp setpattern }
+ifelse
+} bind dd
+/_ssc
+{
+_sc aload pop
+_sp null eq { setcolor} { _sp setpattern } ifelse
+} bind dd
+/scn {
+dup type /dicttype eq
+{ dup /_fp xdd
+/PaintType get 1 eq
+{ /_fc _fillColors 0 get dd ilp }
+{ /_fc _fillColors
+_fcs 1 get
+GetComps get dd
+sc
+}
+ifelse
+}
+{ sc }
+ifelse
+} bd
+/SCN {
+dup type /dicttype eq
+{ dup /_sp xdd
+/PaintType get 1 eq
+{ /_sc _strokeColors 0 get dd ilp }
+{ /_sc _strokeColors _scs 1 get GetComps get dd
+SC
+}
+ifelse
+}
+{ SC }
+ifelse
+} bd
+/gs
+{
+begin
+/SA here { setstrokeadjust } if
+/BG here { setblackgeneration } if
+/UCR here { setundercolorremoval } if
+/FL here { i } if
+/RI here { ri } if
+/TR here
+{
+dup xcheck
+{ settransfer }
+{ aload pop setcolortransfer }
+ifelse
+} if
+/sethalftonephase isdefined? { /HTP here { sethalftonephase } if } if
+/HT here { sethalftone } if
+currentdict gsDI
+end
+} bd
+/sfc {
+_op? setoverprint
+_lp /fill ne {
+_sfcs
+_sfc
+/_lp /fill dd
+} if
+} dd
+/ssc {
+_OP? setoverprint
+_lp /stroke ne {
+_sscs
+_ssc
+/_lp /stroke dd
+} if
+} dd
+/f {
+{ { sfc fill }
+{gsave sfc fill grestore clip newpath icl ilp}
+{gsave sfc fill grestore eoclip newpath icl ilp}
+} _doClip get exec
+} bd
+/f* {
+{ { sfc eofill }
+{gsave sfc eofill grestore clip newpath icl ilp}
+{gsave sfc eofill grestore eoclip newpath icl ilp}
+} _doClip get exec
+} bd
+/S {
+{ { ssc stroke }
+{gsave ssc stroke grestore clip newpath icl ilp}
+{gsave ssc stroke grestore eoclip newpath icl ilp}
+} _doClip get exec
+} bd
+/rf {
+{ { sfc rectfill }
+{gsave sfc rectfill grestore clip newpath icl ilp}
+{gsave sfc rectfill grestore eoclip newpath icl ilp}
+} _doClip get exec
+} bd
+/knownColorants? {
+pop false
+} bd
+/makePat {
+gsave
+dup /Matrix get concat
+matrix makepattern
+grestore
+/MadePattern defineRes pop
+} bd
+%%EndResource
+%%BeginResource: procset pdftext
+%%Version: 4.0 2
+%%Copyright: Copyright 1987-1998 Adobe Systems Incorporated. All Rights Reserved.
+%%Title: Text operators for PDF
+PDF /PDFText 75 dict dup begin put
+/docinitialize
+{
+/resourcestatus where {
+pop
+/CIDParams /ProcSet resourcestatus {
+pop pop
+false /CIDParams /ProcSet findresource /SetBuildCompatible get exec
+} if
+} if
+PDF begin
+PDFText /_pdfDefineIdentity-H known
+{ PDFText /_pdfDefineIdentity-H get exec}
+if
+end
+} bd
+/initialize {
+PDFText begin
+/_intT false dd
+0 Tr
+} bd
+/terminate { end } bd
+/_safeput
+{
+Level2? not
+{
+2 index load dup dup length exch maxlength ge
+{ dup length 5 add dict copy
+3 index xdd
+}
+{ pop }
+ifelse
+}
+if
+3 -1 roll load 3 1 roll put
+}
+bd
+/pdf_has_composefont? systemdict /composefont known def
+/CopyFont {
+{
+1 index /FID ne 2 index /UniqueID ne and
+{ def } { pop pop } ifelse
+} forall
+} bd
+/Type0CopyFont
+{
+exch
+dup length dict
+begin
+CopyFont
+[
+exch
+FDepVector
+{
+dup /FontType get 0 eq
+{
+1 index Type0CopyFont
+/_pdfType0 exch definefont
+}
+{
+/_pdfBaseFont exch
+2 index exec
+}
+ifelse
+exch
+}
+forall
+pop
+]
+/FDepVector exch def
+currentdict
+end
+} bd
+/cHexEncoding
+[/c00/c01/c02/c03/c04/c05/c06/c07/c08/c09/c0A/c0B/c0C/c0D/c0E/c0F/c10/c11/c12
+/c13/c14/c15/c16/c17/c18/c19/c1A/c1B/c1C/c1D/c1E/c1F/c20/c21/c22/c23/c24/c25
+/c26/c27/c28/c29/c2A/c2B/c2C/c2D/c2E/c2F/c30/c31/c32/c33/c34/c35/c36/c37/c38
+/c39/c3A/c3B/c3C/c3D/c3E/c3F/c40/c41/c42/c43/c44/c45/c46/c47/c48/c49/c4A/c4B
+/c4C/c4D/c4E/c4F/c50/c51/c52/c53/c54/c55/c56/c57/c58/c59/c5A/c5B/c5C/c5D/c5E
+/c5F/c60/c61/c62/c63/c64/c65/c66/c67/c68/c69/c6A/c6B/c6C/c6D/c6E/c6F/c70/c71
+/c72/c73/c74/c75/c76/c77/c78/c79/c7A/c7B/c7C/c7D/c7E/c7F/c80/c81/c82/c83/c84
+/c85/c86/c87/c88/c89/c8A/c8B/c8C/c8D/c8E/c8F/c90/c91/c92/c93/c94/c95/c96/c97
+/c98/c99/c9A/c9B/c9C/c9D/c9E/c9F/cA0/cA1/cA2/cA3/cA4/cA5/cA6/cA7/cA8/cA9/cAA
+/cAB/cAC/cAD/cAE/cAF/cB0/cB1/cB2/cB3/cB4/cB5/cB6/cB7/cB8/cB9/cBA/cBB/cBC/cBD
+/cBE/cBF/cC0/cC1/cC2/cC3/cC4/cC5/cC6/cC7/cC8/cC9/cCA/cCB/cCC/cCD/cCE/cCF/cD0
+/cD1/cD2/cD3/cD4/cD5/cD6/cD7/cD8/cD9/cDA/cDB/cDC/cDD/cDE/cDF/cE0/cE1/cE2/cE3
+/cE4/cE5/cE6/cE7/cE8/cE9/cEA/cEB/cEC/cED/cEE/cEF/cF0/cF1/cF2/cF3/cF4/cF5/cF6
+/cF7/cF8/cF9/cFA/cFB/cFC/cFD/cFE/cFF] def
+/modEnc {
+/_enc xdd
+/_icode 0 dd
+counttomark 1 sub -1 0
+{
+index
+dup type /nametype eq
+{
+_enc _icode 3 -1 roll put
+_icode 1 add
+}
+if
+/_icode xdd
+} for
+cleartomark
+_enc
+} bd
+/trEnc {
+/_enc xdd
+255 -1 0 {
+exch dup -1 eq
+{ pop /.notdef }
+{ Encoding exch get }
+ifelse
+_enc 3 1 roll put
+} for
+pop
+_enc
+} bd
+/TE {
+/_i xdd
+StandardEncoding 256 array copy modEnc
+_pdfEncodings exch _i exch put
+} bd
+/TZ
+{
+/_usePDFEncoding xdd
+findfont
+dup length 6 add dict
+begin
+{
+1 index /FID ne { def } { pop pop } ifelse
+} forall
+/pdf_origFontName FontName def
+/FontName exch def
+_usePDFEncoding 0 ge
+{
+/Encoding _pdfEncodings _usePDFEncoding get def
+pop
+}
+{
+_usePDFEncoding -1 eq
+{
+counttomark 0 eq
+{ pop }
+{
+Encoding 256 array copy
+modEnc /Encoding exch def
+}
+ifelse
+}
+{
+256 array
+trEnc /Encoding exch def
+}
+ifelse
+}
+ifelse
+pdf_EuroProcSet pdf_origFontName known
+{
+pdf_origFontName pdf_AddEuroGlyphProc
+} if
+FontName currentdict
+end
+definefont pop
+}
+bd
+/Level2?
+systemdict /languagelevel known
+{systemdict /languagelevel get 2 ge}
+{false}
+ifelse
+def
+Level2?
+{
+/_pdfFontStatus
+{
+currentglobal exch
+/Font resourcestatus
+{pop pop true}
+{false}
+ifelse
+exch setglobal
+} bd
+}
+{
+/_pdfFontStatusString 50 string def
+_pdfFontStatusString 0 (fonts/) putinterval
+/_pdfFontStatus
+{
+FontDirectory 1 index known
+{ pop true }
+{
+_pdfFontStatusString 6 42 getinterval
+cvs length 6 add
+_pdfFontStatusString exch 0 exch getinterval
+{ status } stopped
+{pop false}
+{
+{ pop pop pop pop true}
+{ false }
+ifelse
+}
+ifelse
+}
+ifelse
+} bd
+}
+ifelse
+Level2?
+{
+/_pdfCIDFontStatus
+{
+/CIDFont /Category resourcestatus
+{
+pop pop
+/CIDFont resourcestatus
+{pop pop true}
+{false}
+ifelse
+}
+{ pop false }
+ifelse
+} bd
+}
+if
+/_pdfString100 100 string def
+/_pdfComposeFontName
+{
+dup length 1 eq
+{
+0 get
+1 index
+type /nametype eq
+{
+_pdfString100 cvs
+length dup dup _pdfString100 exch (-) putinterval
+_pdfString100 exch 1 add dup _pdfString100 length exch sub getinterval
+2 index exch cvs length
+add 1 add _pdfString100 exch 0 exch getinterval
+exch pop
+true
+}
+{
+pop pop
+false
+}
+ifelse
+}
+{
+false
+}
+ifelse
+dup {exch cvn exch} if
+} bd
+/_pdfConcatNames
+{
+exch
+_pdfString100 cvs
+length dup dup _pdfString100 exch (-) putinterval
+_pdfString100 exch 1 add dup _pdfString100 length exch sub getinterval
+3 -1 roll exch cvs length
+add 1 add _pdfString100 exch 0 exch getinterval
+cvn
+} bind def
+/_pdfTextTempString 50 string def
+/_pdfRegOrderingArray [(Adobe-Japan1) (Adobe-CNS1) (Adobe-Korea1) (Adobe-GB1)] def
+/_pdf_CheckSupplements
+{
+1 index _pdfTextTempString cvs
+false
+_pdfRegOrderingArray
+{
+2 index exch
+anchorsearch
+{ pop pop pop true exit}
+{ pop }
+ifelse
+}
+forall
+exch pop
+{
+/CIDFont findresource
+/CIDSystemInfo get /Supplement get
+exch /CMap findresource
+/CIDSystemInfo get
+dup type /dicttype eq
+{/Supplement get}
+{pop 0 }
+ifelse
+ge
+}
+{ pop pop true }
+ifelse
+} bind def
+pdf_has_composefont?
+{
+/_pdfComposeFont
+{
+2 copy _pdfComposeFontName not
+{
+2 index
+}
+if
+(pdf) exch _pdfConcatNames
+dup _pdfFontStatus
+{ dup findfont 5 2 roll pop pop pop true}
+{
+4 1 roll
+1 index /CMap resourcestatus
+{
+pop pop
+true
+}
+{false}
+ifelse
+1 index true exch
+{
+_pdfCIDFontStatus not
+{pop false exit}
+if
+}
+forall
+and
+{
+1 index 1 index 0 get _pdf_CheckSupplements
+{
+3 -1 roll pop
+2 index 3 1 roll
+composefont true
+}
+{
+pop pop exch pop false
+}
+ifelse
+}
+{
+_pdfComposeFontName
+{
+dup _pdfFontStatus
+{
+exch pop
+1 index exch
+findfont definefont true
+}
+{
+pop exch pop
+false
+}
+ifelse
+}
+{
+exch pop
+false
+}
+ifelse
+}
+ifelse
+{ true }
+{
+dup _pdfFontStatus
+{ dup findfont true }
+{ pop false }
+ifelse
+}
+ifelse
+}
+ifelse
+} bd
+}
+{
+/_pdfComposeFont
+{
+_pdfComposeFontName not
+{
+dup
+}
+if
+dup
+_pdfFontStatus
+{exch pop dup findfont true}
+{
+1 index
+dup type /nametype eq
+{pop}
+{cvn}
+ifelse
+eq
+{pop false}
+{
+dup _pdfFontStatus
+{dup findfont true}
+{pop false}
+ifelse
+}
+ifelse
+}
+ifelse
+} bd
+}
+ifelse
+/_pdfStyleDicts 4 dict dup begin
+/Adobe-Japan1 4 dict dup begin
+Level2?
+{
+/Serif
+/HeiseiMin-W3-83pv-RKSJ-H _pdfFontStatus
+{/HeiseiMin-W3}
+{
+/HeiseiMin-W3 _pdfCIDFontStatus
+{/HeiseiMin-W3}
+{/Ryumin-Light}
+ifelse
+}
+ifelse
+def
+/SansSerif
+/HeiseiKakuGo-W5-83pv-RKSJ-H _pdfFontStatus
+{/HeiseiKakuGo-W5}
+{
+/HeiseiKakuGo-W5 _pdfCIDFontStatus
+{/HeiseiKakuGo-W5}
+{/GothicBBB-Medium}
+ifelse
+}
+ifelse
+def
+/HeiseiMaruGo-W4-83pv-RKSJ-H _pdfFontStatus
+{/HeiseiMaruGo-W4}
+{
+/HeiseiMaruGo-W4 _pdfCIDFontStatus
+{/HeiseiMaruGo-W4}
+{
+/Jun101-Light-RKSJ-H _pdfFontStatus
+{ /Jun101-Light }
+{ SansSerif }
+ifelse
+}
+ifelse
+}
+ifelse
+/RoundSansSerif exch def
+/Default Serif def
+}
+{
+/Serif /Ryumin-Light def
+/SansSerif /GothicBBB-Medium def
+{
+(fonts/Jun101-Light-83pv-RKSJ-H) status
+}stopped
+{pop}{
+{ pop pop pop pop /Jun101-Light }
+{ SansSerif }
+ifelse
+/RoundSansSerif exch def
+}ifelse
+/Default Serif def
+}
+ifelse
+end
+def
+/Adobe-Korea1 4 dict dup begin
+/Serif /HYSMyeongJo-Medium def
+/SansSerif /HYGoThic-Medium def
+/RoundSansSerif SansSerif def
+/Default Serif def
+end
+def
+/Adobe-GB1 4 dict dup begin
+/Serif /STSong-Light def
+/SansSerif /STHeiti-Regular def
+/RoundSansSerif SansSerif def
+/Default Serif def
+end
+def
+/Adobe-CNS1 4 dict dup begin
+/Serif /MKai-Medium def
+/SansSerif /MHei-Medium def
+/RoundSansSerif SansSerif def
+/Default Serif def
+end
+def
+end
+def
+/TZzero
+{
+/_fyAdj xdd
+/_wmode xdd
+/_styleArr xdd
+/_regOrdering xdd
+3 copy
+_pdfComposeFont
+{
+5 2 roll pop pop pop
+}
+{
+[
+0 1 _styleArr length 1 sub
+{
+_styleArr exch get
+_pdfStyleDicts _regOrdering 2 copy known
+{
+get
+exch 2 copy known not
+{ pop /Default }
+if
+get
+}
+{
+pop pop pop /Unknown
+}
+ifelse
+}
+for
+]
+exch pop
+2 index 3 1 roll
+_pdfComposeFont
+{3 -1 roll pop}
+{
+findfont dup /FontName get exch
+}
+ifelse
+}
+ifelse
+dup /WMode 2 copy known
+{ get _wmode ne }
+{ pop pop _wmode 1 eq}
+ifelse
+_fyAdj 0 ne or
+{
+exch _wmode _pdfConcatNames _fyAdj _pdfConcatNames
+dup _pdfFontStatus
+{ exch pop dup findfont false}
+{ exch true }
+ifelse
+}
+{
+dup /FontType get 0 ne
+}
+ifelse
+{
+dup /FontType get 3 eq _wmode 1 eq and
+{
+_pdfVerticalRomanT3Font dup length 10 add dict copy
+begin
+/_basefont exch
+dup length 3 add dict
+begin
+{1 index /FID ne {def}{pop pop} ifelse }
+forall
+/Encoding Encoding dup length array copy
+dup 16#27 /quotesingle put
+dup 16#60 /grave put
+_regOrdering /Adobe-Japan1 eq
+{dup 16#5c /yen put dup 16#a5 /yen put dup 16#b4 /yen put}
+if
+def
+FontName
+currentdict
+end
+definefont
+def
+/Encoding _basefont /Encoding get def
+/_fauxfont true def
+}
+{
+dup length 3 add dict
+begin
+{1 index /FID ne {def}{pop pop} ifelse }
+forall
+FontType 0 ne
+{
+/Encoding Encoding dup length array copy
+dup 16#27 /quotesingle put
+dup 16#60 /grave put
+_regOrdering /Adobe-Japan1 eq
+{dup 16#5c /yen put}
+if
+def
+/_fauxfont true def
+} if
+} ifelse
+/WMode _wmode def
+/BaseLineAdj _fyAdj def
+dup dup /FontName exch def
+currentdict
+end
+definefont pop
+}
+{
+pop
+}
+ifelse
+/_pdf_FontDirectory 3 1 roll _safeput
+}
+bd
+/swj {
+dup 4 1 roll
+dup length exch stringwidth
+exch 5 -1 roll 3 index mul add
+4 1 roll 3 1 roll mul add
+6 2 roll /_cnt 0 dd
+{1 index eq {/_cnt _cnt 1 add dd} if} forall pop
+exch _cnt mul exch _cnt mul 2 index add 4 1 roll 2 index add 4 1 roll pop pop
+} bd
+/jss {
+4 1 roll
+{
+pop pop
+(0) exch 2 copy 0 exch put
+gsave
+exch false charpath currentpoint
+5 index setmatrix stroke
+3 -1 roll
+32 eq
+{
+moveto
+5 index 5 index rmoveto currentpoint
+}
+if
+grestore
+moveto
+2 copy rmoveto
+} exch cshow
+6 {pop} repeat
+} def
+/jsfTzero {
+{
+pop pop
+(0) exch 2 copy 0 exch put
+exch show
+32 eq
+{
+4 index 4 index rmoveto
+}
+if
+2 copy rmoveto
+} exch cshow
+5 {pop} repeat
+} def
+/jsp
+{
+{
+pop pop
+(0) exch 2 copy 0 exch put
+32 eq
+dup {currentfont /Encoding get dup length 33 ge 
+{32 get /space eq and}{pop}ifelse
+}if
+{ exch 5 index 5 index 5 index 5 -1 roll widthshow }
+{ false charpath }
+ifelse
+2 copy rmoveto
+} exch cshow
+5 {pop} repeat
+} bd
+/trj { _cx 0 fWModeProc 32 _ax 0 fWModeProc 6 5 roll } bd
+/pjsf { trj sfc fawidthshowProc } bd
+/pjss { trj _ctm ssc jss } bd
+/pjsc { trj jsp } bd
+/_Tjdef [
+/pjsf load
+/pjss load
+{
+dup
+currentpoint 3 2 roll
+pjsf
+newpath moveto
+pjss
+} bind
+{
+trj swj rmoveto
+} bind
+{
+dup currentpoint 4 2 roll gsave
+pjsf
+grestore 3 1 roll moveto
+pjsc
+} bind
+{
+dup currentpoint 4 2 roll
+currentpoint gsave newpath moveto
+pjss
+grestore 3 1 roll moveto
+pjsc
+} bind
+{
+dup currentpoint 4 2 roll gsave
+dup currentpoint 3 2 roll
+pjsf
+newpath moveto
+pjss
+grestore 3 1 roll moveto
+pjsc
+} bind
+/pjsc load
+] def
+/BT
+{
+/_inT true dd
+_ctm currentmatrix pop matrix _tm copy pop
+0 _rise _baselineadj add translate _hs 1 scale
+0 0 moveto
+} bd
+/ET
+{
+/_inT false dd
+_tr 3 gt {clip} if
+_ctm setmatrix newpath
+} bd
+/Tr {
+_inT { _tr 3 le {currentpoint newpath moveto} if } if
+dup /_tr xdd
+_Tjdef exch get /_Tj xdd
+} bd
+/Tj {
+userdict /$$copystring 2 index put
+_Tj
+} bd
+/iTm { _ctm setmatrix _tm concat 0 _rise _baselineadj add translate _hs 1 scale } bd
+/Tm { _tm astore pop iTm 0 0 moveto } bd
+/Td { _mtx translate _tm _tm concatmatrix pop iTm 0 0 moveto } bd
+/TD { dup /_ld xdd Td } bd
+/_nullProc {} bd
+/Tf {
+dup 1000 div /_fScl xdd
+_pdf_FontDirectory 2 index 2 copy known
+{get exch 3 -1 roll pop}
+{pop pop}
+ifelse
+Level2?
+{ selectfont }
+{ exch findfont exch scalefont setfont}
+ifelse
+currentfont dup
+/_nullProc exch
+/WMode known
+{
+1 index /WMode get 1 eq
+{pop /exch}
+if
+}
+if
+load /fWModeProc xdd
+dup
+/FontType get 0 eq dup _cx 0 ne and
+{ /jsfTzero }
+{ /awidthshow }
+ifelse
+load /fawidthshowProc xdd
+/_fTzero xdd
+dup /BaseLineAdj known
+{ dup /BaseLineAdj get _fScl mul }
+{ 0 }
+ifelse
+/_baselineadj xdd
+dup /_pdfT3Font known
+{ 0 }
+{_tr}
+ifelse
+_Tjdef exch get /_Tj xdd
+_intT
+{currentpoint iTm moveto}
+if
+pop
+} bd
+/TL { neg /_ld xdd } bd
+/Tw {
+/_cx xdd
+_cx 0 ne _fTzero and
+{ /jsfTzero }
+{ /awidthshow }
+ifelse
+load /fawidthshowProc xdd
+} bd
+/Tc { /_ax xdd } bd
+/Ts { /_rise xdd currentpoint iTm moveto } bd
+/Tz { 100 div /_hs xdd iTm } bd
+/Tk { exch pop _fScl mul neg 0 fWModeProc rmoveto } bd
+/T* { 0 _ld Td } bd
+/' { T* Tj } bd
+/" { exch Tc exch Tw ' } bd
+/TJ {
+{
+dup type /stringtype eq
+{ Tj }
+{ 0 exch Tk }
+ifelse
+} forall
+} bd
+/T- { _hy Tj } bd
+/d0/setcharwidth ld
+/d1 { setcachedevice /sfc{}dd /ssc{}dd } bd
+/nND {{/.notdef} repeat} bd
+/T3Defs {
+/BuildChar
+{
+1 index /Encoding get exch get
+1 index /BuildGlyph get exec
+}
+def
+/BuildGlyph {
+exch begin
+GlyphProcs exch get exec
+end
+} def
+/_pdfT3Font true def
+} bd
+/_pdfBoldRomanWidthProc
+{
+stringwidth 1 index 0 ne { exch .03 add exch }if setcharwidth
+0 0
+} bd
+/_pdfType0WidthProc
+{
+dup stringwidth 0 0 moveto
+2 index true charpath pathbbox
+0 -1
+7 index 2 div .88
+setcachedevice2
+pop
+0 0
+} bd
+/_pdfType0WMode1WidthProc
+{
+dup stringwidth
+pop 2 div neg -0.88
+2 copy
+moveto
+0 -1
+5 -1 roll true charpath pathbbox
+setcachedevice
+} bd
+/_pdfBoldBaseFont
+11 dict begin
+/FontType 3 def
+/FontMatrix[1 0 0 1 0 0]def
+/FontBBox[0 0 1 1]def
+/Encoding cHexEncoding def
+/_setwidthProc /_pdfBoldRomanWidthProc load def
+/_bcstr1 1 string def
+/BuildChar
+{
+exch begin
+_basefont setfont
+_bcstr1 dup 0 4 -1 roll put
+dup
+_setwidthProc
+3 copy
+moveto
+show
+_basefonto setfont
+moveto
+show
+end
+}bd
+currentdict
+end
+def
+pdf_has_composefont?
+{
+/_pdfBoldBaseCIDFont
+11 dict begin
+/CIDFontType 1 def
+/CIDFontName /_pdfBoldBaseCIDFont def
+/FontMatrix[1 0 0 1 0 0]def
+/FontBBox[0 0 1 1]def
+/_setwidthProc /_pdfType0WidthProc load def
+/_bcstr2 2 string def
+/BuildGlyph
+{
+exch begin
+_basefont setfont
+_bcstr2 1 2 index 256 mod put
+_bcstr2 0 3 -1 roll 256 idiv put
+_bcstr2 dup _setwidthProc
+3 copy
+moveto
+show
+_basefonto setfont
+moveto
+show
+end
+}bd
+currentdict
+end
+def
+/_pdfDefineIdentity-H
+{
+/Identity-H /CMap resourcestatus
+{
+pop pop
+}
+{
+/CIDInit/ProcSet findresource begin 12 dict begin
+begincmap
+/CIDSystemInfo
+3 dict begin
+/Registry (Adobe) def
+/Ordering (Identity) def
+/Supplement 0 def
+currentdict
+end
+def
+/CMapName /Identity-H def
+/CMapVersion 1 def
+/CMapType 1 def
+1 begincodespacerange
+<0000> <ffff>
+endcodespacerange
+1 begincidrange
+<0000> <ffff> 0
+endcidrange
+endcmap
+CMapName currentdict/CMap defineresource pop
+end
+end
+} ifelse
+} def
+} if
+/_pdfVerticalRomanT3Font
+10 dict begin
+/FontType 3 def
+/FontMatrix[1 0 0 1 0 0]def
+/FontBBox[0 0 1 1]def
+/_bcstr1 1 string def
+/BuildChar
+{
+exch begin
+_basefont setfont
+_bcstr1 dup 0 4 -1 roll put
+dup
+_pdfType0WidthProc
+moveto
+show
+end
+}bd
+currentdict
+end
+def
+/MakeBoldFont
+{
+dup /ct_SyntheticBold known
+{
+dup length 3 add dict begin
+CopyFont
+/ct_StrokeWidth .03 0 FontMatrix idtransform pop def
+/ct_SyntheticBold true def
+currentdict
+end
+definefont
+}
+{
+dup dup length 3 add dict
+begin
+CopyFont
+/PaintType 2 def
+/StrokeWidth .03 0 FontMatrix idtransform pop def
+/dummybold currentdict
+end
+definefont
+dup /FontType get dup 9 ge exch 11 le and
+{
+_pdfBoldBaseCIDFont
+dup length 3 add dict copy begin
+dup /CIDSystemInfo get /CIDSystemInfo exch def
+/_Type0Identity /Identity-H 3 -1 roll [ exch ] composefont
+/_basefont exch def
+/_Type0Identity /Identity-H 3 -1 roll [ exch ] composefont
+/_basefonto exch def
+currentdict
+end
+/CIDFont defineresource
+}
+{
+_pdfBoldBaseFont
+dup length 3 add dict copy begin
+/_basefont exch def
+/_basefonto exch def
+currentdict
+end
+definefont
+}
+ifelse
+}
+ifelse
+} bd
+/MakeBold {
+1 index
+_pdf_FontDirectory 2 index 2 copy known
+{get}
+{exch pop}
+ifelse
+findfont
+dup
+/FontType get 0 eq
+{
+dup /WMode known {dup /WMode get 1 eq }{false} ifelse
+version length 4 ge
+and
+{version 0 4 getinterval cvi 2015 ge }
+{true}
+ifelse
+{/_pdfType0WidthProc}
+{/_pdfType0WMode1WidthProc}
+ifelse
+_pdfBoldBaseFont /_setwidthProc 3 -1 roll load put
+{MakeBoldFont} Type0CopyFont definefont
+}
+{
+dup /_fauxfont known not 1 index /SubstMaster known not and
+{
+_pdfBoldBaseFont /_setwidthProc /_pdfBoldRomanWidthProc load put
+MakeBoldFont
+}
+{
+2 index 2 index eq
+{ exch pop }
+{
+dup length dict begin
+CopyFont
+currentdict
+end
+definefont
+}
+ifelse
+}
+ifelse
+}
+ifelse
+pop pop
+dup /dummybold ne
+{/_pdf_FontDirectory exch dup _safeput }
+{ pop }
+ifelse
+}bd
+/MakeItalic {
+_pdf_FontDirectory exch 2 copy known
+{get}
+{exch pop}
+ifelse
+dup findfont
+dup /FontInfo 2 copy known
+{
+get
+/ItalicAngle 2 copy known
+{get 0 eq }
+{ pop pop true}
+ifelse
+}
+{ pop pop true}
+ifelse
+{
+exch pop
+dup /FontType get 0 eq Level2? not and
+{ dup /FMapType get 6 eq }
+{ false }
+ifelse
+{
+dup /WMode 2 copy known
+{
+get 1 eq
+{ _italMtx_WMode1Type0 }
+{ _italMtxType0 }
+ifelse
+}
+{ pop pop _italMtxType0 }
+ifelse
+}
+{
+dup /WMode 2 copy known
+{
+get 1 eq
+{ _italMtx_WMode1 }
+{ _italMtx }
+ifelse
+}
+{ pop pop _italMtx }
+ifelse
+}
+ifelse
+makefont
+dup /FontType get 42 eq Level2? not or
+{
+dup length dict begin
+CopyFont
+currentdict
+end
+}
+if
+1 index exch
+definefont pop
+/_pdf_FontDirectory exch dup _safeput
+}
+{
+pop
+2 copy ne
+{
+/_pdf_FontDirectory 3 1 roll _safeput
+}
+{ pop pop }
+ifelse
+}
+ifelse
+}bd
+/MakeBoldItalic {
+/dummybold exch
+MakeBold
+/dummybold
+MakeItalic
+}bd
+Level2?
+{
+/pdf_CopyDict
+{1 index length add dict copy}
+def
+}
+{
+/pdf_CopyDict
+{
+1 index length add dict
+1 index wcheck
+{ copy }
+{ begin
+{def} forall
+currentdict
+end
+}
+ifelse
+}
+def
+}
+ifelse
+/pdf_AddEuroGlyphProc
+{
+currentdict /CharStrings known
+{
+CharStrings /Euro known not
+{
+dup
+/CharStrings
+CharStrings 1 pdf_CopyDict
+begin
+/Euro pdf_EuroProcSet 4 -1 roll get def
+currentdict
+end
+def
+/pdf_PSBuildGlyph /pdf_PSBuildGlyph load def
+/pdf_PathOps /pdf_PathOps load def
+/Symbol eq
+{
+/Encoding Encoding dup length array copy
+dup 160 /Euro put def
+}
+if
+}
+{ pop
+}
+ifelse
+}
+{ pop
+}
+ifelse
+}
+def
+/pdf_PathOps 4 dict dup begin
+/m {moveto} def
+/l {lineto} def
+/c {curveto} def
+/cp {closepath} def
+end
+def
+/pdf_PSBuildGlyph
+{
+gsave
+8 -1 roll pop
+7 1 roll
+currentdict /PaintType 2 copy known {get 2 eq}{pop pop false} ifelse
+dup 9 1 roll
+{
+currentdict /StrokeWidth 2 copy known
+{
+get 2 div
+5 1 roll
+4 -1 roll 4 index sub
+4 1 roll
+3 -1 roll 4 index sub
+3 1 roll
+exch 4 index add exch
+4 index add
+5 -1 roll pop
+}
+{
+pop pop
+}
+ifelse
+}
+if
+setcachedevice
+pdf_PathOps begin
+exec
+end
+{
+currentdict /StrokeWidth 2 copy known
+{ get }
+{ pop pop 0 }
+ifelse
+setlinewidth stroke
+}
+{
+fill
+}
+ifelse
+grestore
+} def
+/pdf_EuroProcSet 13 dict def
+pdf_EuroProcSet
+begin
+/Courier-Bold
+{
+600 0 6 -12 585 612
+{
+385 274 m
+180 274 l
+179 283 179 293 179 303 c
+179 310 179 316 180 323 c
+398 323 l
+423 404 l
+197 404 l
+219 477 273 520 357 520 c
+409 520 466 490 487 454 c
+487 389 l
+579 389 l
+579 612 l
+487 612 l
+487 560 l
+449 595 394 612 349 612 c
+222 612 130 529 98 404 c
+31 404 l
+6 323 l
+86 323 l
+86 304 l
+86 294 86 284 87 274 c
+31 274 l
+6 193 l
+99 193 l
+129 77 211 -12 359 -12 c
+398 -12 509 8 585 77 c
+529 145 l
+497 123 436 80 356 80 c
+285 80 227 122 198 193 c
+360 193 l
+cp
+600 0 m
+}
+pdf_PSBuildGlyph
+} def
+/Courier-BoldOblique /Courier-Bold load def
+/Courier
+{
+600 0 17 -12 578 584
+{
+17 204 m
+97 204 l
+126 81 214 -12 361 -12 c
+440 -12 517 17 578 62 c
+554 109 l
+501 70 434 43 366 43 c
+266 43 184 101 154 204 c
+380 204 l
+400 259 l
+144 259 l
+144 270 143 281 143 292 c
+143 299 143 307 144 314 c
+418 314 l
+438 369 l
+153 369 l
+177 464 249 529 345 529 c
+415 529 484 503 522 463 c
+522 391 l
+576 391 l
+576 584 l
+522 584 l
+522 531 l
+473 566 420 584 348 584 c
+216 584 122 490 95 369 c
+37 369 l
+17 314 l
+87 314 l
+87 297 l
+87 284 88 272 89 259 c
+37 259 l
+cp
+600 0 m
+}
+pdf_PSBuildGlyph
+} def
+/Courier-Oblique /Courier load def
+/Helvetica
+{
+556 0 24 -19 541 703
+{
+541 628 m
+510 669 442 703 354 703 c
+201 703 117 607 101 444 c
+50 444 l
+25 372 l
+97 372 l
+97 301 l
+49 301 l
+24 229 l
+103 229 l
+124 67 209 -19 350 -19 c
+435 -19 501 25 509 32 c
+509 131 l
+492 105 417 60 343 60 c
+267 60 204 127 197 229 c
+406 229 l
+430 301 l
+191 301 l
+191 372 l
+455 372 l
+479 444 l
+194 444 l
+201 531 245 624 348 624 c
+433 624 484 583 509 534 c
+cp
+556 0 m
+}
+pdf_PSBuildGlyph
+} def
+/Helvetica-Oblique /Helvetica load def
+/Helvetica-Bold
+{
+556 0 12 -19 563 710
+{
+563 621 m
+537 659 463 710 363 710 c
+216 710 125 620 101 462 c
+51 462 l
+12 367 l
+92 367 l
+92 346 l
+92 337 93 328 93 319 c
+52 319 l
+12 224 l
+102 224 l
+131 58 228 -19 363 -19 c
+417 -19 471 -12 517 18 c
+517 146 l
+481 115 426 93 363 93 c
+283 93 254 166 246 224 c
+398 224 l
+438 319 l
+236 319 l
+236 367 l
+457 367 l
+497 462 l
+244 462 l
+259 552 298 598 363 598 c
+425 598 464 570 486 547 c
+507 526 513 517 517 509 c
+cp
+556 0 m
+}
+pdf_PSBuildGlyph
+} def
+/Helvetica-BoldOblique /Helvetica-Bold load def
+/Symbol
+{
+750 0 20 -12 714 685
+{
+714 581 m
+650 645 560 685 465 685 c
+304 685 165 580 128 432 c
+50 432 l
+20 369 l
+116 369 l
+115 356 115 347 115 337 c
+115 328 115 319 116 306 c
+50 306 l
+20 243 l
+128 243 l
+165 97 300 -12 465 -12 c
+560 -12 635 25 685 65 c
+685 155 l
+633 91 551 51 465 51 c
+340 51 238 131 199 243 c
+555 243 l
+585 306 l
+184 306 l
+183 317 182 326 182 336 c
+182 346 183 356 184 369 c
+614 369 l 644 432 l
+199 432 l
+233 540 340 622 465 622 c
+555 622 636 580 685 520 c
+cp
+750 0 m
+}
+pdf_PSBuildGlyph
+} def
+/Times-Bold
+{
+500 0 16 -14 478 700
+{
+367 308 m
+224 308 l
+224 368 l
+375 368 l
+380 414 l
+225 414 l
+230 589 257 653 315 653 c
+402 653 431 521 444 457 c
+473 457 l
+473 698 l
+444 697 l
+441 679 437 662 418 662 c
+393 662 365 700 310 700 c
+211 700 97 597 73 414 c
+21 414 l
+16 368 l
+69 368 l
+69 359 68 350 68 341 c
+68 330 68 319 69 308 c
+21 308 l
+16 262 l
+73 262 l
+91 119 161 -14 301 -14 c
+380 -14 443 50 478 116 c
+448 136 l
+415 84 382 40 323 40 c
+262 40 231 77 225 262 c
+362 262 l
+cp
+500 0 m
+}
+pdf_PSBuildGlyph
+} def
+/Times-BoldItalic
+{
+500 0 9 -20 542 686
+{
+542 686 m
+518 686 l
+513 673 507 660 495 660 c
+475 660 457 683 384 683 c
+285 683 170 584 122 430 c
+58 430 l
+34 369 l
+105 369 l
+101 354 92 328 90 312 c
+34 312 l
+9 251 l
+86 251 l
+85 238 84 223 84 207 c
+84 112 117 -14 272 -14 c
+326 -14 349 9 381 9 c
+393 9 393 -10 394 -20 c
+420 -20 l
+461 148 l
+429 148 l
+416 109 362 15 292 15 c
+227 15 197 55 197 128 c
+197 162 204 203 216 251 c
+378 251 l
+402 312 l
+227 312 l
+229 325 236 356 241 369 c
+425 369 l
+450 430 l
+255 430 l
+257 435 264 458 274 488 c
+298 561 337 654 394 654 c
+437 654 484 621 484 530 c
+484 516 l
+516 516 l
+cp
+500 0 m
+}
+pdf_PSBuildGlyph
+} def
+/Times-Italic
+{
+500 0 23 -10 595 692
+{
+399 317 m
+196 317 l
+199 340 203 363 209 386 c
+429 386 l
+444 424 l
+219 424 l
+246 514 307 648 418 648 c
+448 648 471 638 492 616 c
+529 576 524 529 527 479 c
+549 475 l
+595 687 l
+570 687 l
+562 674 558 664 542 664 c
+518 664 474 692 423 692 c
+275 692 162 551 116 424 c
+67 424 l
+53 386 l
+104 386 l
+98 363 93 340 90 317 c
+37 317 l
+23 279 l
+86 279 l
+85 266 85 253 85 240 c
+85 118 137 -10 277 -10 c
+370 -10 436 58 488 128 c
+466 149 l
+424 101 375 48 307 48 c
+212 48 190 160 190 234 c
+190 249 191 264 192 279 c
+384 279 l
+cp
+500 0 m
+}
+pdf_PSBuildGlyph
+} def
+/Times-Roman
+{
+500 0 10 -12 484 692
+{
+347 298 m
+171 298 l
+170 310 170 322 170 335 c
+170 362 l
+362 362 l
+374 403 l
+172 403 l
+184 580 244 642 308 642 c
+380 642 434 574 457 457 c
+481 462 l
+474 691 l
+449 691 l
+433 670 429 657 410 657 c
+394 657 360 692 299 692 c
+204 692 94 604 73 403 c
+22 403 l
+10 362 l
+70 362 l
+69 352 69 341 69 330 c
+69 319 69 308 70 298 c
+22 298 l
+10 257 l
+73 257 l
+97 57 216 -12 295 -12 c
+364 -12 427 25 484 123 c
+458 142 l
+425 101 384 37 316 37 c
+256 37 189 84 173 257 c
+335 257 l
+cp
+500 0 m
+}
+pdf_PSBuildGlyph
+} def
+end
+currentdict readonly pop end
+%%EndResource
+PDFText begin
+[39/quotesingle 96/grave 128/Adieresis/Aring/Ccedilla/Eacute/Ntilde/Odieresis
+/Udieresis/aacute/agrave/acircumflex/adieresis/atilde/aring/ccedilla/eacute
+/egrave/ecircumflex/edieresis/iacute/igrave/icircumflex/idieresis/ntilde
+/oacute/ograve/ocircumflex/odieresis/otilde/uacute/ugrave/ucircumflex
+/udieresis/dagger/degree/cent/sterling/section/bullet/paragraph/germandbls
+/registered/copyright/trademark/acute/dieresis/.notdef/AE/Oslash
+/.notdef/plusminus/.notdef/.notdef/yen/mu/.notdef/.notdef
+/.notdef/.notdef/.notdef/ordfeminine/ordmasculine/.notdef/ae/oslash
+/questiondown/exclamdown/logicalnot/.notdef/florin/.notdef/.notdef
+/guillemotleft/guillemotright/ellipsis/space/Agrave/Atilde/Otilde/OE/oe
+/endash/emdash/quotedblleft/quotedblright/quoteleft/quoteright/divide
+/.notdef/ydieresis/Ydieresis/fraction/currency/guilsinglleft/guilsinglright
+/fi/fl/daggerdbl/periodcentered/quotesinglbase/quotedblbase/perthousand
+/Acircumflex/Ecircumflex/Aacute/Edieresis/Egrave/Iacute/Icircumflex
+/Idieresis/Igrave/Oacute/Ocircumflex/.notdef/Ograve/Uacute/Ucircumflex
+/Ugrave/dotlessi/circumflex/tilde/macron/breve/dotaccent/ring/cedilla
+/hungarumlaut/ogonek/caron
+0 TE
+[1/dotlessi/caron 39/quotesingle 96/grave 
+127/bullet/Euro/bullet/quotesinglbase/florin/quotedblbase/ellipsis
+/dagger/daggerdbl/circumflex/perthousand/Scaron/guilsinglleft/OE
+/bullet/Zcaron/bullet/bullet/quoteleft/quoteright/quotedblleft
+/quotedblright/bullet/endash/emdash/tilde/trademark/scaron
+/guilsinglright/oe/bullet/zcaron/Ydieresis/space/exclamdown/cent/sterling
+/currency/yen/brokenbar/section/dieresis/copyright/ordfeminine
+/guillemotleft/logicalnot/hyphen/registered/macron/degree/plusminus
+/twosuperior/threesuperior/acute/mu/paragraph/periodcentered/cedilla
+/onesuperior/ordmasculine/guillemotright/onequarter/onehalf/threequarters
+/questiondown/Agrave/Aacute/Acircumflex/Atilde/Adieresis/Aring/AE/Ccedilla
+/Egrave/Eacute/Ecircumflex/Edieresis/Igrave/Iacute/Icircumflex/Idieresis
+/Eth/Ntilde/Ograve/Oacute/Ocircumflex/Otilde/Odieresis/multiply/Oslash
+/Ugrave/Uacute/Ucircumflex/Udieresis/Yacute/Thorn/germandbls/agrave
+/aacute/acircumflex/atilde/adieresis/aring/ae/ccedilla/egrave/eacute
+/ecircumflex/edieresis/igrave/iacute/icircumflex/idieresis/eth/ntilde
+/ograve/oacute/ocircumflex/otilde/odieresis/divide/oslash/ugrave/uacute
+/ucircumflex/udieresis/yacute/thorn/ydieresis
+1 TE
+end
+%%BeginResource: pdfimage.prc
+%%Copyright: Copyright 1987-1993 Adobe Systems Incorporated. All Rights Reserved.
+PDF /PDFImage 38 dict put
+PDF /PDFIVars 20 dict put
+PDF /PDFImage get begin
+/initialize { PDFImage begin } bd
+/terminate { end } bd
+/nulldict 0 dict def
+/gv { PDFIVars exch get } bd
+/pv { PDFIVars 3 1 roll put } bd
+/BI { save /savelevel exch pv mark } bd
+/EI { /savelevel gv restore } bd
+end
+%%EndResource
+%%BeginResource: pdfimg2.prc
+%%Version: 4.0 4
+%%Copyright: Copyright 1987-1993 Adobe Systems Incorporated. All Rights Reserved.
+PDF /PDFImage get begin
+Level2? StartLoad {
+/ID {
+5 counttomark 2 idiv
+dup 3 1 roll add
+dict begin
+{ def } repeat
+cleartomark
+currentdict
+end
+begin
+/ImageType here { pop } { /ImageType 1 def } ifelse
+/ImageMatrix [ Width 0 0 Height neg 0 Height ] def
+/ImageMask here { not } { true } ifelse
+{ /ImageMask false def } if
+ImageMask not { ColorSpace setcolorspace } if
+/Intent here { ri } if
+SLBApplies?
+{ ApplySLB }
+{
+mark
+/DataSource here { } { currentfile } ifelse
+/Filter here {
+dup type /arraytype eq { length } { pop 1 } ifelse
+1 sub 0 1 3 -1 roll {
+/DecodeParms here {
+dup type /arraytype eq {
+1 index get
+} if
+dup null eq { pop } { exch } ifelse
+} if
+Filter dup type /arraytype eq
+{ exch get } { exch pop } ifelse
+filter
+dup
+} for
+} if
+/DataSource exch def
+currentdict /ImageMask here not {false} if
+{ sfc imagemask } { image } ifelse
+counttomark
+{ dup status
+dup currentfile ne and
+{ dup flushfile closefile }
+{ pop }
+ifelse
+}
+repeat
+pop
+}ifelse
+end
+} [/Width /Height /ImageMask /ColorSpace /Filter] bld
+/SLBApplies?
+{
+{
+languagelevel 3 lt {stop} if
+currentsystemparams /SourceListBypass known not {stop} if
+currentsystemparams /SourceListBypass get not {stop} if
+currentdict /Filter known not {stop} if
+Filter /CCITTFaxDecode ne {stop} if
+currentdict /DecodeParms known not {stop} if
+DecodeParms /K known not {stop} if
+DecodeParms /K get -1 ne {stop} if
+} stopped not
+} [/DecodeParms] bld
+/ApplySLB
+{
+{
+/UncompressedLength
+Width
+DecodeParms /EncodedByteAlign getifknown
+{ { 7 add 3 bitshift } if } if
+Height mul def
+/DataSource dup here { } {currentfile} ifelse
+5 dict begin
+/Filter Filter def
+/DecodeParms DecodeParms def
+/Intent 3 def
+/AsyncRead false def
+/CloseSource false def
+currentdict end /ReusableStreamDecode filter def
+currentdict /ImageMask here not {false} if
+{ sfc imagemask } { image } ifelse
+} exec
+} [/Width /DecodeParms /Height] bld
+currentdict readonly pop
+} EndLoad
+end
+%%EndResource
+%%BeginResource: pdfasc.prc
+%%Version: 4.0 2
+%%Copyright: Copyright 1992-1997 Adobe Systems Incorporated. All Rights Reserved.
+/AS {
+9 dict begin
+/shrink? xdd
+/Pury xdd
+/Purx xdd
+/Plly xdd
+/Pllx xdd
+gsave newpath clippath pathbbox newpath grestore
+/Dury xdd
+/Durx xdd
+/Dlly xdd
+/Dllx xdd
+Durx Dllx sub Dury Dlly sub
+Pury Plly sub div exch Purx Pllx sub div
+2 copy gt { exch } if pop
+Durx Dllx add 2 div Dury Dlly add 2 div translate
+shrink? { dup scale } { pop } ifelse
+Purx Pllx add -2 div Pury Plly add -2 div translate
+end
+} [/shrink? /Pury /Purx /Plly /Pllx /Durx /Dury /Dllx /Dlly]
+bld
+%%EndResource
+currentdict readonly pop
+end end
+/currentpacking where {pop setpacking}if
+PDFVars/DocInitAll{[ PDFText]{/docinitialize get exec}forall }put
+PDFVars/InitAll{[PDF PDFText PDFImage]{/initialize get exec}forall initgs}put
+PDFVars/TermAll{[PDFImage PDFText PDF]{/terminate get exec}forall}put
+PDFVars begin PDF begin
+PDFVars/DocInitAll get exec PDFVars/InitAll get exec
+/N28 <<
+/SA false 
+>> /ExtGState defineRes pop
+%%IncludeResource Symbol
+[ 1 /equivalence/Omega/xi/eta
+/N14/Symbol -1 TZ
+%%IncludeResource Times-Italic
+[/N27/Times-Italic 1 TZ
+%%IncludeResource Times-Bold
+[/N25/Times-Bold 1 TZ
+%%IncludeResource Times-Roman
+[/N24/Times-Roman 1 TZ
+PDFVars/TermAll get exec end end
+
+%%EndSetup
+%%Page: 1 1
+%%BeginPageSetup
+userdict /pgsave save put
+PDFVars begin PDF begin PDFVars/InitAll get exec
+0 0 612 792 true PDF begin PDFVars begin AS end end
+%%EndPageSetup
+0 0 612 792 RC
+BT
+/N24 1 Tf
+12 0 0 12 516 708.59999 Tm
+0 0 0 rg
+/N28 /ExtGState findRes gsDI
+0 Tc
+0 Tw
+(2003 )Tj 
+/N25 1 Tf
+-20.75999 -1.67999 TD
+-0.00048 Tc
+0.00048 Tw
+(Astronomy 322 )Tj 
+-0.63999 -1.66999 TD
+-0.00138 Tc
+0.00138 Tw
+(AIPS)Tj [-5.39999 ]TJ ( L)Tj [-4.39999 ]TJ (a)Tj [-1.39999 ]TJ (b)Tj [-5.39999 ]TJ (o)Tj [-1.39999 ]TJ (ratory:   )Tj 
+-5.84999 -1.66999 TD
+0.00079 Tc
+-0.00079 Tw
+(Making, Cleaning and Analyzing a VLA Map )Tj 
+/N24 1 Tf
+-9.75 -2.83999 TD
+-0.00149 Tc
+0 Tw
+(I. )Tj 
+/N25 1 Tf
+2.25 0 TD
+-0.00068 Tc
+(In)Tj [-4.69999 ]TJ (trod)Tj [-4.69999 ]TJ (u)Tj [-4.69999 ]TJ (c)Tj [3.29998 ]TJ (tion)Tj 
+/N24 1 Tf
+5.44999 0 TD
+0 Tc
+( )Tj 
+-7.69999 -1.5 TD
+-0.00119 Tc
+0.18119 Tw
+( )Tj [-2570 ]TJ (These sheets are to help you navigate a )Tj 
+20.28999 0 TD
+-0.00099 Tc
+0.18099 Tw
+(software package called )Tj [10 ]TJ (AIPS )Tj [10 ]TJ (\(Astronomical )Tj 
+-20.28999 -1.16999 TD
+-0.00079 Tc
+0.01078 Tw
+(Image )Tj [-10 ]TJ (Processing Software\). You will \223learn by doi)Tj 
+20.81999 0 TD
+-0.00019 Tc
+0.01019 Tw
+(ng.\224 That is, most of the learning about AIPS )Tj 
+-20.81999 -1.16999 TD
+-0.00009 Tc
+0.02009 Tw
+(will be as you use it to construct )Tj 
+13.31999 0 TD
+-0.00099 Tc
+0.02099 Tw
+(a map of the sky from u-v )Tj [10 ]TJ (data )Tj 
+12.66999 0 TD
+-0.00068 Tc
+0.01069 Tw
+(obtained several years ago using )Tj 
+-25.98999 -1.16999 TD
+-0.00109 Tc
+0.04109 Tw
+(the VLA. Embedded in this write-up are a number )Tj 
+20.70999 0 TD
+-0.00048 Tc
+0.03048 Tw
+(of )Tj [-10 ]TJ (tasks )Tj [-10 ]TJ (for )Tj [-10 ]TJ (you )Tj [-10 ]TJ (to complete and turn in. You )Tj 
+-20.70999 -1.16999 TD
+-0.00019 Tc
+0.00019 Tw
+(will also be asked to print out some of the )Tj 
+16.98999 0 TD
+-0.00028 Tc
+0.00028 Tw
+(images you construc)Tj 
+8.20999 0 TD
+(t and turn those in as well. )Tj 
+-25.19999 -2.00999 TD
+-0.00199 Tc
+0 Tw
+(II. )Tj 
+/N25 1 Tf
+2.25 0 TD
+-0.00088 Tc
+0.00088 Tw
+(What Went Before)Tj 
+/N24 1 Tf
+8.03999 0 TD
+0 Tc
+0 Tw
+(\205 )Tj 
+-10.28999 -1.5 TD
+-0.00109 Tc
+0.04109 Tw
+( )Tj [-2710 ]TJ (The )Tj [-10 ]TJ (data )Tj [-10 ]TJ (I\222m providing you has already been c)Tj 
+21.95999 0 TD
+-0.00088 Tc
+0.04089 Tw
+(onsiderably processed. )Tj 
+9.41999 0 TD
+-0.00059 Tc
+0.04058 Tw
+(Here, I want to list )Tj 
+-31.37998 -1.16999 TD
+-0.00048 Tc
+0.09049 Tw
+(the )Tj [-10 ]TJ (steps )Tj [-10 ]TJ (that )Tj [-10 ]TJ (it has gone through before you )Tj 
+18.78999 0 TD
+-0.00028 Tc
+0.09028 Tw
+(received it; you may want to look up these AIPS )Tj 
+-18.78999 -1.16999 TD
+-0.00099 Tc
+0.03099 Tw
+(tasks just to see what has already been done fo)Tj 
+18.86999 0 TD
+-0.00158 Tc
+0.03158 Tw
+(r you. Here and )Tj [10 ]TJ (elsewhere, )Tj 
+11.05999 0 TD
+-0.00059 Tc
+0.02059 Tw
+(I\222ll specify task names )Tj 
+-29.92999 -1.16999 TD
+-0.00088 Tc
+0.00088 Tw
+(with all caps, like TVFLG. You can type lower or upper case. )Tj 
+0 -1.5 TD
+0.00028 Tc
+-0.00028 Tw
+( )Tj [-2750 ]TJ (1. )Tj [-500 ]TJ (Loa)Tj [4.29998 ]TJ (d)Tj [0.29998 ]TJ ( the)Tj [4.29998 ]TJ ( da)Tj [4.29998 ]TJ (ta)Tj [4.29998 ]TJ ( into AI)Tj 
+13.03999 0 TD
+-0.00079 Tc
+0.31079 Tw
+(PS: relevant )Tj [310 ]TJ (program\205UVLOD )Tj 
+-13.03999 -1.5 TD
+-0.00059 Tc
+0.00059 Tw
+( )Tj [-2750 ]TJ (2. )Tj [-500 ]TJ (Sort the data )Tj [-8200 ]TJ (\223 )Tj [-3810 ]TJ ( UVSRT )Tj 
+T*
+0.00028 Tc
+-0.00028 Tw
+( )Tj [-2750 ]TJ (3. )Tj [-500 ]TJ (Ca)Tj [4.29998 ]TJ (libra)Tj [4.29998 ]TJ (te)Tj [4.29998 ]TJ ( the)Tj [4.29998 ]TJ ( da)Tj [4.29998 ]TJ (ta)Tj [4.29998 ]TJ ( )Tj [-6210 ]TJ (\223)Tj [4.29998 ]TJ ( )Tj [-3810 ]TJ ( VLACAL )Tj 
+T*
+-0.00088 Tc
+0.00088 Tw
+( )Tj [-2750 ]TJ (4. )Tj [-500 ]TJ (Remove bad data )Tj [-6320 ]TJ (\223 )Tj [-3810 ]TJ ( TVFLG )Tj 
+T*
+-0.00129 Tc
+0.02128 Tw
+( )Tj [-2730 ]TJ (The second of these programs arranges the u-)Tj 
+21.27999 0 TD
+-0.00109 Tc
+0.01109 Tw
+(v data in increasing distance from the center )Tj 
+-21.27999 -1.16999 TD
+-0.00169 Tc
+0.12168 Tw
+(of )Tj [-10 ]TJ (t)Tj [-3.69999 ]TJ (h)Tj [-1.69999 ]TJ (e )Tj [-10 ]TJ (u-v )Tj [-10 ]TJ (pl)Tj [-3.69999 ]TJ (ane, )Tj [-10 ]TJ (t)Tj [-3.69999 ]TJ (h)Tj [-1.69999 ]TJ (e )Tj [-10 ]TJ (form)Tj [-3.69999 ]TJ ( )Tj [-10 ]TJ (i)Tj [-3.69999 ]TJ (n)Tj [-1.69999 ]TJ ( )Tj [-10 ]TJ (whi)Tj [-3.69999 ]TJ (c)Tj [2.29998 ]TJ (h )Tj [-10 ]TJ (i)Tj [-3.69999 ]TJ (t)Tj [-3.69999 ]TJ (\222)Tj [1.29998 ]TJ (s easi)Tj [-3.69999 ]TJ (e)Tj [2.29998 ]TJ (st)Tj [-3.69999 ]TJ ( t)Tj [-3.69999 ]TJ (o)Tj [-1.69999 ]TJ ( anal)Tj [-3.69999 ]TJ (yze for t)Tj [-3.69999 ]TJ (h)Tj [-1.69999 ]TJ (e m)Tj [-3.69999 ]TJ (a)Tj [2.29998 ]TJ (ki)Tj [-3.69999 ]TJ (ng of \223m)Tj [-3.69999 ]TJ (aps,\224 or radi)Tj [-3.69999 ]TJ (o )Tj 
+T*
+-0.00048 Tc
+0.00048 Tw
+(images of the sky. )Tj 
+0 -2.00999 TD
+-0.00228 Tc
+0 Tw
+(III. )Tj 
+/N25 1 Tf
+2.25 0 TD
+-0.00199 Tc
+0.00199 Tw
+(E)Tj [-5 ]TJ (n)Tj [-6 ]TJ (teri)Tj [-4 ]TJ (n)Tj [-6 ]TJ (g)Tj [-2 ]TJ ( AIPS)Tj 
+/N24 1 Tf
+6.30999 0 TD
+0 Tc
+0 Tw
+( )Tj 
+-8.55999 -1.5 TD
+0.00019 Tc
+0.10978 Tw
+( )Tj [-2640 ]TJ (To ge)Tj [4.19999 ]TJ (t into AIPS, log in to Ura)Tj [4.19999 ]TJ (n)Tj [0.19999 ]TJ (ia)Tj [4.19999 ]TJ ( \(our De)Tj 
+20.91999 0 TD
+(ll worksta)Tj [4.19999 ]TJ (tion\) or one)Tj [4.19999 ]TJ ( of the)Tj [4.19999 ]TJ ( XTe)Tj [4.19999 ]TJ (r)Tj [3.19999 ]TJ (ms in the)Tj [4.19999 ]TJ ( )Tj 
+-20.91999 -1.16999 TD
+-0.00079 Tc
+0.13079 Tw
+(Observatory, using your name )Tj [10 ]TJ (a)Tj 
+13.28999 0 TD
+-0.00068 Tc
+0.12069 Tw
+(nd password, and when you get the )Tj 
+15.14999 0 TD
+0.12059 Tw
+(prompt, type \223start_aips.\224 )Tj 
+-28.43998 -1.16999 TD
+-0.00079 Tc
+0.01078 Tw
+(The )Tj [-10 ]TJ (program will ask you which printer to use\227select)Tj 
+21.88999 0 TD
+-0.00059 Tc
+0.01058 Tw
+( 1, the Observatory printer. It will then ask )Tj 
+-21.88999 -1.16999 TD
+-0.00028 Tc
+0.05029 Tw
+(you your AIPS user number\227be su)Tj 
+14.53999 0 TD
+-0.00119 Tc
+0.05119 Tw
+(re to use your number and )Tj 
+/N27 1 Tf
+10.98999 0 TD
+-0.00109 Tc
+0.04109 Tw
+(only your number)Tj 
+/N24 1 Tf
+7.17999 0 TD
+-0.00039 Tc
+0.04039 Tw
+(. In all your lab )Tj 
+-32.70999 -1.16999 TD
+(work, supply your AIPS user number as well as your)Tj 
+21.5 0 TD
+-0.00119 Tc
+0.04119 Tw
+( name. You are now ready to look for )Tj [10 ]TJ (data, )Tj 
+-21.5 -1.16999 TD
+0.00019 Tc
+0.29978 Tw
+(or to c)Tj [4.19999 ]TJ (a)Tj [4.19999 ]TJ (rry out va)Tj [4.19999 ]TJ (rious ope)Tj [4.19999 ]TJ (ra)Tj [4.19999 ]TJ (tions on it. The)Tj [4.19999 ]TJ ( da)Tj [4.19999 ]TJ (ta)Tj [4.19999 ]TJ ( will be)Tj [4.19999 ]TJ ( in two forms, e)Tj [4.19999 ]TJ (ithe)Tj [4.19999 ]TJ (r)Tj [3.19999 ]TJ ( )Tj [10 ]TJ (u-v )Tj [10 ]TJ (da)Tj [4.19999 ]TJ (ta)Tj [4.19999 ]TJ ( )Tj 
+T*
+-0.00019 Tc
+0.00019 Tw
+(\(visibilities\) or images of the sky, )Tj 
+13.68998 0 TD
+-0.00088 Tc
+0.00088 Tw
+(called maps. To see what you\222ve got)Tj 
+14.60998 0 TD
+-0.00079 Tc
+0.00079 Tw
+(, select a particular disk by )Tj 
+-28.29998 -1.16999 TD
+-0.00119 Tc
+0.05119 Tw
+(typing \223INDI n\224 where n is the number )Tj [10 ]TJ (of )Tj [10 ]TJ (the )Tj [10 ]TJ (di)Tj 
+19.70999 0 TD
+-0.00019 Tc
+0.04019 Tw
+(sk. I\222ll set you up with the data on disk 1. Then )Tj 
+-19.70999 -1.16999 TD
+-0.00088 Tc
+0.00088 Tw
+(to see what u-v data you\222ve got, type \223U)Tj 
+16.15998 0 TD
+(CAT\224 and return; for maps, type \223MCAT.\224 )Tj 
+-16.15998 -1.5 TD
+-0.00099 Tc
+0.16099 Tw
+( )Tj [-2590 ]TJ (To fetch data into a pr)Tj 
+12.63999 0 TD
+-0.00028 Tc
+0.16029 Tw
+(ogram, you call it by its catalog number on the disk )Tj [10 ]TJ (using )Tj [10 ]TJ (the )Tj 
+-12.63999 -1.16999 TD
+-0.00109 Tc
+0.00109 Tw
+(command \223GETN n\224.)Tj 
+/N25 1 Tf
+8.72999 0 TD
+0 Tc
+0 Tw
+( )Tj 
+/N24 1 Tf
+-8.72999 -2.00999 TD
+-0.00129 Tc
+(IV. )Tj 
+/N25 1 Tf
+2.25 0 TD
+-0.00009 Tc
+0.00009 Tw
+(A Primer of AIPS Tasks and Variables)Tj 
+/N24 1 Tf
+16.60998 0 TD
+0 Tc
+0 Tw
+( )Tj 
+-18.85998 -1.5 TD
+-0.00219 Tc
+0.08219 Tw
+( )Tj [-2670 ]TJ (The program)Tj [-4.19999 ]TJ (s i)Tj [-4.19999 ]TJ (n)Tj [-2.19999 ]TJ ( AIP)Tj [-6.19999 ]TJ (S)Tj [-6.19999 ]TJ ( are consi)Tj [-4.19999 ]TJ (d)Tj [-2.19999 ]TJ (ered ei)Tj [-4.19999 ]TJ (t)Tj [-4.19999 ]TJ (h)Tj [-2.19999 ]TJ (er t)Tj [-4.19999 ]TJ (a)Tj 
+22.09999 0 TD
+-0.00088 Tc
+0.07089 Tw
+(sks )Tj [-10 ]TJ (or )Tj [-10 ]TJ (verbs. )Tj [-10 ]TJ (To specify a particular task, )Tj 
+-22.09999 -1.16999 TD
+-0.00059 Tc
+0.06059 Tw
+(like making a map, you would type TASK )Tj [10 ]TJ (\221UVMAP\222 )Tj 
+22.27999 0 TD
+-0.00079 Tc
+0.05079 Tw
+(for instance. Note th)Tj 
+8.29998 0 TD
+-0.00068 Tc
+(e single quotes. That )Tj 
+-30.57998 -1.16999 TD
+0.06059 Tw
+(calls up the task called UVMAP. )Tj 
+13.75999 0 TD
+-0.00109 Tc
+0.05108 Tw
+(Once )Tj [-10 ]TJ (you\222ve )Tj [-10 ]TJ (called up a task, you ha)Tj 
+15.10998 0 TD
+0 Tc
+0.04998 Tw
+(ve to specify how it is to )Tj 
+ET
+PDFVars/TermAll get exec end end
+userdict /pgsave get restore
+showpage
+%%PageTrailer
+%%EndPage
+%%Page: 2 2
+%%BeginPageSetup
+userdict /pgsave save put
+PDFVars begin PDF begin PDFVars/InitAll get exec
+0 0 612 792 true PDF begin PDFVars begin AS end end
+%%EndPageSetup
+0 0 612 792 RC
+BT
+/N24 1 Tf
+12 0 0 12 72 744.59999 Tm
+0 0 0 rg
+/N28 /ExtGState findRes gsDI
+19 Tc
+0 Tw
+( 2)Tj 
+ET
+q
+
+303 741.95999 6 14.03999 re
+W n 
+BT
+12 0 0 12 309 744.59999 Tm
+0 Tc
+( )Tj 
+ET
+Q
+BT
+12 0 0 12 72 708.59999 Tm
+-0.00079 Tc
+0.04078 Tw
+(be carried out. That is done)Tj 
+11.11999 0 TD
+-0.00099 Tc
+0.04098 Tw
+( by specifying a number of )Tj 
+/N27 1 Tf
+11.20999 0 TD
+0.00079 Tc
+0 Tw
+(inputs)Tj 
+/N24 1 Tf
+2.44999 0 TD
+-0.00048 Tc
+0.03048 Tw
+(. For instance, you may need to get )Tj 
+-24.77999 -1.16999 TD
+0.04049 Tw
+(some data into the program. You would do that )Tj 
+19.50999 0 TD
+-0.00138 Tc
+0.03138 Tw
+(by using GETN \(see above\). [In order to change )Tj 
+-19.50999 -1.16999 TD
+-0.00079 Tc
+0.16079 Tw
+(the inputs, of course, you have )Tj 
+13.43998 0 TD
+-0.00048 Tc
+0.15049 Tw
+(to )Tj [-10 ]TJ (be )Tj [-10 ]TJ (able to view them\227t)Tj 
+11.39999 0 TD
+-0.00068 Tc
+0.15069 Tw
+(hat is done by typing \223INP\224 once )Tj 
+-24.83999 -1.16999 TD
+-0.00138 Tc
+0.07139 Tw
+(you\222ve selected a task.] In the )Tj 
+12.57998 0 TD
+0.00009 Tc
+0.06988 Tw
+(instructions that follow, I\222ll )Tj [10 ]TJ (ge)Tj 
+12.45999 0 TD
+-0.00039 Tc
+0.06039 Tw
+(nerally tell you which of the input )Tj 
+-25.03999 -1.16999 TD
+-0.00099 Tc
+0.05099 Tw
+(variables you have to worry about. They can be )Tj 
+19.66999 0 TD
+-0.00119 Tc
+0.04119 Tw
+(changed by typing the name of the variable \(for )Tj 
+-19.66999 -1.16999 TD
+0.00019 Tc
+0.21978 Tw
+(insta)Tj [4.19999 ]TJ (n)Tj [0.19999 ]TJ (c)Tj [4.19999 ]TJ (e)Tj [4.19999 ]TJ ( OUTNA\) followe)Tj [4.19999 ]TJ (d by the)Tj [4.19999 ]TJ ( qua)Tj [4.19999 ]TJ (ntity or na)Tj [4.19999 ]TJ (me)Tj [4.19999 ]TJ (. In some)Tj [4.19999 ]TJ ( c)Tj [4.19999 ]TJ (a)Tj [4.19999 ]TJ (s)Tj [-0.79998 ]TJ (e)Tj [4.19999 ]TJ (s)Tj [-0.79998 ]TJ ( the)Tj [4.19999 ]TJ ( qua)Tj [4.19999 ]TJ (ntity ha)Tj [4.19999 ]TJ (s )Tj [10 ]TJ (to )Tj [10 ]TJ (be)Tj [4.19999 ]TJ ( )Tj 
+T*
+-0.00039 Tc
+0.06039 Tw
+(enclosed in single quotes; in other cases it doe)Tj 
+18.95999 0 TD
+-0.00048 Tc
+(s not\227look to see how each )Tj [10 ]TJ (quantity )Tj [10 ]TJ (is )Tj [10 ]TJ (specified )Tj 
+-18.95999 -1.16999 TD
+-0.00009 Tc
+0.00009 Tw
+(on the inputs. )Tj 
+0 -1.5 TD
+-0.00088 Tc
+0.05088 Tw
+( )Tj [-2700 ]TJ (Once )Tj [-10 ]TJ (the )Tj [-10 ]TJ (inputs are all set, you make the task)Tj 
+21.54998 0 TD
+-0.00059 Tc
+0.05059 Tw
+( operate by typing \223go\224)Tj 
+9.56999 0 TD
+-0.00088 Tc
+0.05088 Tw
+( and the task name, )Tj 
+-31.11999 -1.16999 TD
+0 Tc
+0 Tw
+(this time with no single quotes around it. )Tj 
+0 -1.5 TD
+-0.00039 Tc
+0.20039 Tw
+( )Tj [-2550 ]TJ (You may have noticed that AIPS opens )Tj 
+20.40998 0 TD
+-0.00119 Tc
+0.20118 Tw
+(a second window on the screen, which is a )Tj 
+-20.40998 -1.16999 TD
+-0.00028 Tc
+0.10029 Tw
+(message window\227this w)Tj 
+10.46998 0 TD
+-0.00019 Tc
+0.10018 Tw
+(ill tell you how your programs are doing. One thing you )Tj [10 ]TJ (should )Tj [10 ]TJ (look )Tj 
+-10.46998 -1.16999 TD
+-0.00138 Tc
+0.13139 Tw
+(for is the dreaded phrase, \223dies of unnatural cau)Tj 
+20.11999 0 TD
+-0.00109 Tc
+0.13108 Tw
+(ses,\224 in which case you need to seek help. A )Tj 
+-20.11999 -1.16999 TD
+-0.00048 Tc
+0.00048 Tw
+(happier outcome is )Tj 
+7.84999 0 TD
+-0.00109 Tc
+0.00109 Tw
+(\223ended successfully.\224 )Tj 
+-7.84999 -2.00999 TD
+0 Tw
+(V. )Tj 
+/N25 1 Tf
+2.25 0 TD
+0.00138 Tc
+-0.00138 Tw
+(M)Tj [5.39999 ]TJ (a)Tj [1.39999 ]TJ (king a M)Tj [5.39999 ]TJ (a)Tj [1.39999 ]TJ (p)Tj 
+/N24 1 Tf
+6.33999 0 TD
+0 Tc
+0 Tw
+( )Tj 
+-8.58999 -1.5 TD
+-0.00079 Tc
+0.09078 Tw
+( )Tj [-2660 ]TJ (The task you want to use here is )Tj [10 ]TJ (UVMAP. )Tj [10 ]TJ (It )Tj 
+21.92999 0 TD
+-0.00068 Tc
+0.08068 Tw
+(basically takes a set of)Tj 
+9.29998 0 TD
+-0.00119 Tc
+0.08119 Tw
+( u-v data, correctly )Tj 
+-31.22999 -1.16999 TD
+-0.00059 Tc
+0.14059 Tw
+(sorted, )Tj [-10 ]TJ (and )Tj [-10 ]TJ (then fast Fourier tr)Tj 
+12.80999 0 TD
+-0.00009 Tc
+0.14009 Tw
+(ansforms it into an image of th)Tj 
+13.10998 0 TD
+-0.00048 Tc
+0.14048 Tw
+(e sky. You will need to set the )Tj 
+-25.91999 -1.16999 TD
+-0.00129 Tc
+0.05128 Tw
+(parameter INNAME to your u-)Tj 
+12.60998 0 TD
+-0.00039 Tc
+0.05039 Tw
+(v data; the easiest way to do this )Tj 
+13.60998 0 TD
+-0.00059 Tc
+0.05059 Tw
+(is to type \223GETN n\224 )Tj [10 ]TJ (with )Tj [10 ]TJ (n )Tj [10 ]TJ (the )Tj 
+-26.21998 -1.16999 TD
+-0.00119 Tc
+0.07119 Tw
+(appropriate catalog number once you)Tj 
+15.12998 0 TD
+-0.00028 Tc
+0.07029 Tw
+(\222re in the task UVMAP. You will )Tj [10 ]TJ (also )Tj [10 ]TJ (need )Tj [10 ]TJ (to )Tj [10 ]TJ (think )Tj [10 ]TJ (about )Tj 
+-15.12998 -1.16999 TD
+-0.00079 Tc
+0.26078 Tw
+(the size of the image )Tj [10 ]TJ (you )Tj [10 ]TJ (wish )Tj [10 ]TJ (to )Tj [10 ]TJ (construct. )Tj 
+19.87998 0 TD
+-0.00048 Tc
+0.25048 Tw
+(Given the speed of our system, it\222s okay to )Tj 
+-19.87998 -1.16999 TD
+-0.00028 Tc
+0.04029 Tw
+(experiment with eith)Tj 
+8.34999 0 TD
+-0.00048 Tc
+0.04049 Tw
+(er 512 or 1024 maps; the final product )Tj 
+15.89999 0 TD
+0.03048 Tw
+(should probably be a 1024 map, that )Tj 
+-24.25 -1.16999 TD
+-0.00028 Tc
+0.07029 Tw
+(is 1024 pixels on a side. You )Tj [10 ]TJ (will )Tj [10 ]TJ (be )Tj [10 ]TJ (asked )Tj 
+18.00999 0 TD
+-0.00109 Tc
+0.06109 Tw
+(to specify a UVWTFN\227us)Tj 
+11.18998 0 TD
+-0.00138 Tc
+0.06138 Tw
+(e \221NA\222\227note the single )Tj 
+-29.19999 -1.16999 TD
+-0.00009 Tc
+0 Tw
+(quotes. )Tj 
+0 -1.5 TD
+0.00039 Tc
+0.00959 Tw
+( )Tj [-2740 ]TJ (You )Tj [-10 ]TJ (will )Tj [-10 ]TJ (a)Tj [4.39999 ]TJ (l)Tj [-1.59999 ]TJ (so )Tj [-10 ]TJ (ne)Tj [4.39999 ]TJ (e)Tj [4.39999 ]TJ (d)Tj [0.39999 ]TJ ( )Tj [-10 ]TJ (to )Tj [-10 ]TJ (work )Tj [-10 ]TJ (out )Tj [-10 ]TJ (the)Tj [4.39999 ]TJ ( )Tj [-10 ]TJ (siz)Tj [4.39999 ]TJ (e)Tj [4.39999 ]TJ ( of the)Tj [4.39999 ]TJ ( pixe)Tj [4.39999 ]TJ (ls in the)Tj [4.39999 ]TJ ( ma)Tj [4.39999 ]TJ (p. The)Tj [4.39999 ]TJ ( rule)Tj [4.39999 ]TJ ( of thumb is tha)Tj [4.39999 ]TJ (t)Tj [-1.59999 ]TJ ( )Tj 
+0 -1.16999 TD
+-0.00099 Tc
+0.04098 Tw
+(there should be four or more pixels across the )Tj 
+18.84999 0 TD
+-0.00028 Tc
+0.03028 Tw
+(synthesized )Tj [-10 ]TJ (main beam. So you will need to work )Tj 
+-18.84999 -1.16999 TD
+0.12028 Tw
+(out roughly how big the synthesized beam )Tj [10 ]TJ (will )Tj [10 ]TJ (be)Tj 
+20.86999 0 TD
+-0.00079 Tc
+0.11079 Tw
+(. That will be determined by the size of the )Tj 
+-20.86999 -1.16999 TD
+-0.00088 Tc
+0.00088 Tw
+(array \(d\), which I will gi)Tj 
+9.80999 0 TD
+(ve you, and the wavelength. )Tj 
+-9.80999 -1.5 TD
+-0.00048 Tc
+0.00048 Tw
+( )Tj [-2750 ]TJ (Cell size = __________ )Tj 
+T*
+-0.00059 Tc
+0.00059 Tw
+(This is the first of the pieces of )Tj 
+12.64999 0 TD
+-0.00028 Tc
+0.00028 Tw
+(information I want you to turn in. )Tj 
+-12.64999 -1.5 TD
+-0.00079 Tc
+0.10079 Tw
+( )Tj [-2650 ]TJ (The program UVMAP also constructs an image)Tj 
+22.67999 0 TD
+-0.00248 Tc
+0.10249 Tw
+( of t)Tj [-4.5 ]TJ (h)Tj [-2.5 ]TJ (e beam)Tj [-4.5 ]TJ (. R)Tj [-5.5 ]TJ (ecorded i)Tj [-4.5 ]TJ (n)Tj [-2.5 ]TJ ( t)Tj [-4.5 ]TJ (h)Tj [-2.5 ]TJ (e )Tj [10 ]TJ (dat)Tj [-4.5 ]TJ (a)Tj [1.5 ]TJ ( )Tj [10 ]TJ (I\222ve )Tj 
+-22.67999 -1.16999 TD
+-0.00028 Tc
+0.01029 Tw
+(given you is information about the )Tj [10 ]TJ (position )Tj [10 ]TJ (of )Tj [10 ]TJ (each )Tj 
+20.72999 0 TD
+-0.00099 Tc
+0.00099 Tw
+(of the 27 elements of the VLA. The computer )Tj 
+-20.72999 -1.16999 TD
+-0.00088 Tc
+0.11088 Tw
+(uses this to construct a gray scale image of wh)Tj 
+19.53999 0 TD
+-0.00099 Tc
+0.11099 Tw
+(at the synthesized beam )Tj 
+10.19999 0 TD
+-0.00019 Tc
+0.10018 Tw
+(looks like. To find the )Tj 
+-29.73999 -1.16999 TD
+-0.00088 Tc
+0.00088 Tw
+(catalog numbers of the map and the )Tj 
+14.5 0 TD
+-0.00068 Tc
+0.00068 Tw
+(beam produced by UVMAP, use MCAT. )Tj 
+-14.5 -2.00999 TD
+-0.00129 Tc
+0 Tw
+(VI. )Tj 
+/N25 1 Tf
+2.25 0 TD
+-0.00048 Tc
+0.00048 Tw
+(Viewing Images)Tj 
+/N24 1 Tf
+6.79998 0 TD
+0 Tc
+0 Tw
+( )Tj 
+-9.04998 -1.5 TD
+-0.00068 Tc
+0.05068 Tw
+( )Tj [-2700 ]TJ (Once UVMAP has worked successfully, you\222d lik)Tj 
+23.34999 0 TD
+-0.00099 Tc
+0.04098 Tw
+(e )Tj [-10 ]TJ (to look at the image of the beam and )Tj 
+-23.34999 -1.16999 TD
+-0.00119 Tc
+0.03118 Tw
+(the image of the sky you have created. That can be)Tj 
+20.54998 0 TD
+-0.00068 Tc
+0.02069 Tw
+( )Tj [-10 ]TJ (done )Tj [-10 ]TJ (with )Tj [-10 ]TJ (the task TVLOD. First, use GETN )Tj 
+-20.54998 -1.16999 TD
+0.11059 Tw
+(n to bring in the appropriate )Tj 
+12.08999 0 TD
+-0.00088 Tc
+0.10089 Tw
+(image, )Tj [-10 ]TJ (then )Tj [-10 ]TJ (\223task \221TVLOD\222\224 and INP to check the inputs. When )Tj 
+-12.08999 -1.16999 TD
+0.00088 Tw
+(they are okay, type \223go tvlod\224 )Tj 
+12.27999 0 TD
+-0.00068 Tc
+0.00068 Tw
+(and fiddle with the TV window )Tj 
+12.81999 0 TD
+(until you\222ve got a nice image. You )Tj 
+-25.09999 -1.16999 TD
+-0.00079 Tc
+0.08079 Tw
+(may need to adjust the transfer )Tj [10 ]TJ (function )Tj [10 ]TJ (\(the )Tj [10 ]TJ (br)Tj 
+19.34999 0 TD
+-0.00059 Tc
+0.07058 Tw
+(ightness and contrast\) of )Tj 
+10.31999 0 TD
+-0.00028 Tc
+0.07029 Tw
+(the image; that is done )Tj 
+-29.66999 -1.16999 TD
+-0.00129 Tc
+0.17129 Tw
+(with a separate task )Tj 
+8.76998 0 TD
+-0.00088 Tc
+0.17089 Tw
+(called TVFID. Once you start TVFID, )Tj 
+16.59999 0 TD
+0.00039 Tc
+0.15959 Tw
+(it )Tj [-10 ]TJ (will )Tj [-10 ]TJ (instruct )Tj [-10 ]TJ (you as to how to )Tj 
+-25.36999 -1.16999 TD
+-0.00169 Tc
+0 Tw
+(proceed. )Tj 
+ET
+PDFVars/TermAll get exec end end
+userdict /pgsave get restore
+showpage
+%%PageTrailer
+%%EndPage
+%%Page: 3 3
+%%BeginPageSetup
+userdict /pgsave save put
+PDFVars begin PDF begin PDFVars/InitAll get exec
+0 0 612 792 true PDF begin PDFVars begin AS end end
+%%EndPageSetup
+0 0 612 792 RC
+BT
+/N24 1 Tf
+12 0 0 12 72 744.59999 Tm
+0 0 0 rg
+/N28 /ExtGState findRes gsDI
+19 Tc
+0 Tw
+( 3)Tj 
+ET
+q
+
+303 741.95999 6 14.03999 re
+W n 
+BT
+12 0 0 12 309 744.59999 Tm
+0 Tc
+( )Tj 
+ET
+Q
+BT
+12 0 0 12 72 708.47999 Tm
+-0.00199 Tc
+(VII. )Tj 
+/N25 1 Tf
+2.25 0 TD
+0.00088 Tc
+-0.00088 Tw
+(Manipulating, Analyzing )Tj 
+10.93998 0 TD
+0.00129 Tc
+-0.00129 Tw
+(and Pr)Tj [5.29998 ]TJ (int)Tj [4.29998 ]TJ (i)Tj [-0.69999 ]TJ (ng Im)Tj [4.29998 ]TJ (age)Tj [5.29998 ]TJ (s )Tj 
+/N24 1 Tf
+-10.18998 -1.5 TD
+-0.00119 Tc
+0.03118 Tw
+(Here I list a series of tasks useful for an)Tj 
+16.08999 0 TD
+-0.00048 Tc
+0.03048 Tw
+(alyzing and improving ra)Tj 
+10.15998 0 TD
+-0.00009 Tc
+0.02009 Tw
+(dio images displayed on )Tj 
+-29.25 -1.16999 TD
+-0.00019 Tc
+0.00019 Tw
+(the TV, using AIPS. )Tj 
+3 -1.5 TD
+-0.00129 Tc
+0 Tw
+(TVF)Tj [-5.29998 ]TJ (I)Tj [1.69999 ]TJ (D\227changes )Tj 
+/N27 1 Tf
+7.60998 0 TD
+0.00009 Tc
+(contrast)Tj 
+/N24 1 Tf
+3.27999 0 TD
+-0.00088 Tc
+0.21089 Tw
+( \(be sure to have cursor in image window when )Tj [10 ]TJ (you )Tj [10 ]TJ (push )Tj 
+-13.88999 -1.16999 TD
+-0.00039 Tc
+0.00039 Tw
+(buttons A-D\) )Tj 
+0 -1.54998 TD
+-0.00048 Tc
+0.00048 Tw
+(Note:  \223buttons A-D\224 )Tj 
+/N14 1 Tf
+8.81999 0 TD
+0 Tc
+0 Tw
+(\001)Tj 
+/N24 1 Tf
+0.54998 0 TD
+-0.00039 Tc
+0.00039 Tw
+( F3-F6 function keys on our keyboards. )Tj 
+-9.36999 -1.5 TD
+-0.00119 Tc
+0.00119 Tw
+(TVWIN--draws boxes on screen, and se)Tj 
+16 0 TD
+-0.00009 Tc
+0.00009 Tw
+(ts BLC and TRC for later tasks. )Tj 
+-16 -1.5 TD
+-0.00109 Tc
+0.00109 Tw
+(TVSLICE\227draws a line on screen. )Tj 
+T*
+-0.00169 Tc
+0.00169 Tw
+(TVR)Tj [-4.69999 ]TJ (E)Tj [-0.69999 ]TJ (S)Tj [-5.69999 ]TJ (\227)Tj [-1.69999 ]TJ (\223rest)Tj [-3.69999 ]TJ (o)Tj [-1.69999 ]TJ (res\224 and cl)Tj [-3.69999 ]TJ (eanses i)Tj [-3.69999 ]TJ (m)Tj [-3.69999 ]TJ (a)Tj [2.29998 ]TJ (ge. )Tj 
+T*
+-0.00129 Tc
+0.00129 Tw
+(\(If you need to reload, use TVLOD again.\) )Tj 
+T*
+-0.00019 Tc
+0.00019 Tw
+(IMSTAT\227takes statistics within box set by TVWIN. )Tj 
+T*
+-0.00079 Tc
+0.00079 Tw
+(IMFIT\227fits 2-d Gaussian to a source in a box )Tj 
+18.77999 0 TD
+-0.00048 Tc
+0.00048 Tw
+(set by TVWIN; output should appear on printer. )Tj 
+-18.77999 -1.5 TD
+-0.00068 Tc
+0.00068 Tw
+(SLICE\227takes a profile of)Tj 
+10.50999 0 TD
+-0.00019 Tc
+0.00019 Tw
+( intensity along a line previously set by TVSLCE. )Tj 
+-10.50999 -1.5 TD
+-0.00088 Tc
+0.14089 Tw
+(Using )Tj [-10 ]TJ (SLICE )Tj [-10 ]TJ (produces a graphic image \(sketc)Tj 
+19.37998 0 TD
+-0.00068 Tc
+0.14068 Tw
+(hed below\). How do you di)Tj 
+11.62998 0 TD
+0.14059 Tw
+(splay such images? )Tj 
+-31.00999 -1.16999 TD
+-0.00028 Tc
+0.16029 Tw
+(Plots like this and other graphi)Tj 
+13.04998 0 TD
+-0.00059 Tc
+0.16059 Tw
+(c images \(as opposed to radio image)Tj 
+15.48999 0 TD
+-0.00138 Tc
+0.16139 Tw
+(s of the sky\) )Tj [10 ]TJ (appear )Tj [10 ]TJ (in )Tj [10 ]TJ (a )Tj 
+-28.53999 -1.16999 TD
+-0.00088 Tc
+0.09089 Tw
+(separate \(fourth\) window, the TK window. To disp)Tj 
+21.00999 0 TD
+-0.00028 Tc
+0.09028 Tw
+(lay such images, type)Tj 
+8.86999 0 TD
+-0.00088 Tc
+0.08088 Tw
+( )Tj [-10 ]TJ (go TKSL. To make a )Tj 
+-29.87998 -1.16999 TD
+-0.00028 Tc
+0.00028 Tw
+(hard copy, type go SL2PL; then go LWPLA )Tj 
+17.95999 0 TD
+-0.00059 Tc
+0.00059 Tw
+(and look for your output on the printer. )Tj 
+-17.95999 -2.00999 TD
+-0.00219 Tc
+0 Tw
+(VIII. )Tj 
+/N25 1 Tf
+2.25 0 TD
+-0.00028 Tc
+0.00028 Tw
+(Task to Perform on This Map)Tj 
+/N24 1 Tf
+12.75 0 TD
+0 Tc
+0 Tw
+( \()Tj 
+/N25 1 Tf
+0.57998 0 TD
+-0.00299 Tc
+(th)Tj [-7 ]TJ (e)Tj 
+/N24 1 Tf
+1.32998 0 TD
+0 Tc
+( \223)Tj 
+/N25 1 Tf
+0.68998 0 TD
+-0.00178 Tc
+(Dirty)Tj 
+/N24 1 Tf
+2.26998 0 TD
+-0.00399 Tc
+(\224 )Tj 
+/N25 1 Tf
+0.68998 0 TD
+-0.00199 Tc
+(Map)Tj 
+/N24 1 Tf
+2 0 TD
+-0.00299 Tc
+(\) )Tj 
+/N25 1 Tf
+0.57998 0 TD
+0.00228 Tc
+-0.00228 Tw
+(and t)Tj [5.29998 ]TJ (h)Tj [-1.69999 ]TJ (e)Tj [6.29998 ]TJ ( Be)Tj [6.29998 ]TJ (am)Tj 
+/N24 1 Tf
+5.88999 0 TD
+0 Tc
+0 Tw
+( )Tj 
+-29.02999 -1.5 TD
+-0.00138 Tc
+0.11138 Tw
+( )Tj [-1890 ]TJ (1. )Tj [-390 ]TJ (Take a slice through the )Tj [10 ]TJ (center )Tj [10 ]TJ (of )Tj [10 ]TJ (the )Tj 
+/N27 1 Tf
+19.65998 0 TD
+-0.00099 Tc
+0 Tw
+(beam)Tj 
+/N24 1 Tf
+2.15998 0 TD
+-0.00009 Tc
+0.10009 Tw
+( image using TV and print out this cross-)Tj 
+-18.06999 -1.16999 TD
+-0.00119 Tc
+0.04119 Tw
+(section of the beam. Is the )Tj [10 ]TJ (response )Tj [10 ]TJ (of )Tj [10 ]TJ (the )Tj 
+17.33999 0 TD
+-0.00068 Tc
+0.03068 Tw
+(VLA unity on axis, as expected? By playing )Tj 
+-17.33999 -1.16999 TD
+-0.00039 Tc
+0.17039 Tw
+(around with various slices, get one that you )Tj 
+18.97999 0 TD
+-0.00059 Tc
+0.16059 Tw
+(like, and use it to estimate the relative )Tj 
+-18.97999 -1.16999 TD
+-0.00009 Tc
+0.00009 Tw
+(a)Tj [3.89999 ]TJ (m)Tj [-2.09999 ]TJ (plitude)Tj [3.89999 ]TJ ( of the)Tj [3.89999 ]TJ ( first inte)Tj [3.89999 ]TJ (rfe)Tj [3.89999 ]TJ (re)Tj [3.89999 ]TJ (n)Tj 
+12.52999 0 TD
+-0.00109 Tc
+0.00109 Tw
+(ce side lobes of the VLA beam. )Tj 
+-16.27999 -1.5 TD
+-0.00059 Tc
+0.00059 Tw
+( )Tj [-5750 ]TJ (side lobe level = __________% )Tj 
+T*
+0.07058 Tw
+( )Tj [-3430 ]TJ (I also want you to turn in the )Tj [10 ]TJ (beam )Tj [10 ]TJ (image)Tj 
+20.97999 0 TD
+-0.00048 Tc
+0.06048 Tw
+( when you\222re happy with it. Finally, I\222d like )Tj 
+-17.22999 -1.16999 TD
+0.09049 Tw
+(you to comment on the particul)Tj 
+12.96998 0 TD
+-0.00088 Tc
+0.09089 Tw
+(ar pattern you see in the ima)Tj 
+11.84999 0 TD
+-0.00039 Tc
+0.09039 Tw
+(ge. Can you relate this )Tj [10 ]TJ (to )Tj 
+-24.81999 -1.16999 TD
+0.00099 Tc
+-0.00099 Tw
+(the)Tj [5 ]TJ (  )Tj 
+T*
+-0.00138 Tc
+0.00138 Tw
+(Y-shaped arrangement )Tj 
+9.29998 0 TD
+-0.00149 Tc
+0.00149 Tw
+(of the VLA antennas? )Tj 
+-13.04998 -1.5 TD
+-0.00109 Tc
+0.01109 Tw
+( )Tj [-3490 ]TJ (Now )Tj [-10 ]TJ (use )Tj [-10 ]TJ (TVLOD )Tj [-10 ]TJ (to )Tj [-10 ]TJ (look at the image of the )Tj 
+22.02999 0 TD
+-0.00068 Tc
+0.01069 Tw
+(sky, the so-called \223dir)Tj 
+8.78999 0 TD
+0.00019 Tc
+0.00979 Tw
+(ty map.\224 It will look )Tj 
+-27.06999 -1.16999 TD
+-0.00068 Tc
+0.07069 Tw
+(quite messy. In particular, you should see a br)Tj 
+18.91999 0 TD
+-0.00048 Tc
+0.07049 Tw
+(ight source or two with )Tj [10 ]TJ (strong )Tj [10 ]TJ (side-lobe )Tj 
+-18.91999 -1.16999 TD
+-0.00129 Tc
+0.02128 Tw
+(patterns attached. When you have the transfer)Tj 
+18.36999 0 TD
+-0.00048 Tc
+0.01049 Tw
+( )Tj [-10 ]TJ (function \(brightness a)Tj 
+9 0 TD
+-0.00068 Tc
+0.01069 Tw
+(nd contrast\) to your )Tj 
+-27.36999 -1.16999 TD
+-0.00028 Tc
+0.06028 Tw
+(liking, make an image of th)Tj 
+11.28999 0 TD
+-0.00068 Tc
+0.05068 Tw
+(is )Tj [-10 ]TJ (dirty )Tj [-10 ]TJ (map. )Tj [-10 ]TJ (Also )Tj [-10 ]TJ (use the programs TVWIN and IMSTAT )Tj 
+-11.28999 -1.16999 TD
+0.10058 Tw
+(to measure the rms noise in a portion )Tj [10 ]TJ (of )Tj [10 ]TJ (th)Tj 
+17.77999 0 TD
+-0.00109 Tc
+0.09109 Tw
+(e image away from bright sources. Record )Tj 
+-17.77999 -1.16999 TD
+0.00079 Tc
+-0.00079 Tw
+(this va)Tj [4.79998 ]TJ (lue)Tj [4.79998 ]TJ (.)Tj [0.79998 ]TJ ( )Tj 
+-3.75 -1.5 TD
+-0.00028 Tc
+0.00028 Tw
+( )Tj [-3500 ]TJ (rms noise in the dirty map = __________. )Tj 
+0 -2.00999 TD
+-0.00129 Tc
+0 Tw
+(IX. )Tj 
+/N25 1 Tf
+2.25 0 TD
+-0.00239 Tc
+0.00239 Tw
+(Cl)Tj [-4.39999 ]TJ (ean)Tj [-6.39999 ]TJ (i)Tj [-4.39999 ]TJ (n)Tj [-6.39999 ]TJ (g)Tj [-2.39999 ]TJ ( th)Tj [-6.39999 ]TJ (e Map)Tj 
+/N24 1 Tf
+7.66999 0 TD
+0 Tc
+0 Tw
+( )Tj 
+-9.91999 -1.5 TD
+-0.00088 Tc
+0.09089 Tw
+( )Tj [-2660 ]TJ (As the adjective \223dirty\224 suggests, the map you\222)Tj 
+22.48999 0 TD
+-0.00028 Tc
+0.09028 Tw
+(ve just constructed is)Tj 
+8.67999 0 TD
+-0.00068 Tc
+0.08068 Tw
+( full of artifacts. In )Tj 
+-31.16999 -1.16999 TD
+0.04058 Tw
+(particular, each bright point in )Tj 
+12.56999 0 TD
+-0.00079 Tc
+0.04078 Tw
+(the image of the sky is surrounded )Tj 
+14.28999 0 TD
+-0.00099 Tc
+0.04098 Tw
+(by the side-lobe pattern of )Tj [10 ]TJ (the )Tj 
+-26.85998 -1.16999 TD
+-0.00138 Tc
+0.04139 Tw
+(beam. )Tj [-10 ]TJ (Since we know what the beam)Tj 
+15.07998 0 TD
+-0.00079 Tc
+0.04078 Tw
+( looks like, however, we can in)Tj 
+12.65998 0 TD
+-0.00059 Tc
+0.04058 Tw
+( principle subt)Tj 
+5.79998 0 TD
+-0.00088 Tc
+0.04089 Tw
+(ract out those )Tj 
+-33.53999 -1.16999 TD
+-0.00119 Tc
+0.00119 Tw
+(effects, leaving you with a \223clean\224 map. Th)Tj 
+17.36999 0 TD
+-0.00059 Tc
+0.00059 Tw
+(at is what the program APCLN does. )Tj 
+ET
+PDFVars/TermAll get exec end end
+userdict /pgsave get restore
+showpage
+%%PageTrailer
+%%EndPage
+%%Page: 4 4
+%%BeginPageSetup
+userdict /pgsave save put
+PDFVars begin PDF begin PDFVars/InitAll get exec
+0 0 612 792 true PDF begin PDFVars begin AS end end
+%%EndPageSetup
+0 0 612 792 RC
+BT
+/N24 1 Tf
+12 0 0 12 72 744.59999 Tm
+0 0 0 rg
+/N28 /ExtGState findRes gsDI
+19 Tc
+0 Tw
+( 4)Tj 
+ET
+q
+
+303 741.95999 6 14.03999 re
+W n 
+BT
+12 0 0 12 309 744.59999 Tm
+0 Tc
+( )Tj 
+ET
+Q
+BT
+12 0 0 12 72 708.59999 Tm
+-0.00009 Tc
+0.03009 Tw
+( )Tj [-2720 ]TJ (Let\222s look at that in a little )Tj 
+14.05999 0 TD
+-0.00099 Tc
+0.02099 Tw
+(more detail. Suppose you were dea)Tj 
+14.06999 0 TD
+-0.00039 Tc
+0.02038 Tw
+(ling with a point source, or )Tj 
+-28.12998 -1.16999 TD
+-0.00099 Tc
+0.05099 Tw
+(at least a source much smaller th)Tj 
+13.32998 0 TD
+0.05108 Tw
+(an either the pixel size or the )Tj 
+12.12998 0 TD
+-0.00028 Tc
+0.05029 Tw
+(synthesized beam. Then it )Tj [10 ]TJ (should )Tj 
+-25.45999 -1.16999 TD
+-0.00099 Tc
+0.06098 Tw
+(appear )Tj [-10 ]TJ (in your map essentially as)Tj 
+13.58999 0 TD
+-0.00079 Tc
+0.06079 Tw
+( a delta function, as shown in fi)Tj 
+12.95999 0 TD
+(g. 1 below. But because of the )Tj 
+-26.54998 -1.16999 TD
+-0.00068 Tc
+0.16069 Tw
+(shape of the synthesized beam, you will actually )Tj 
+20.87998 0 TD
+-0.00169 Tc
+0.15168 Tw
+(have the shape of the )Tj 
+9.41999 0 TD
+-0.00079 Tc
+0.15078 Tw
+(synthesized beam, as )Tj 
+-30.29998 -1.21998 TD
+-0.00088 Tc
+0.00088 Tw
+(shown in fig. 2 below\227recall the case of )Tj 
+/N14 1 Tf
+16.65998 0 TD
+0 Tc
+0 Tw
+(\002)Tj 
+/N24 1 Tf
+6 0 0 6 281.27999 648.83999 Tm
+(s)Tj 
+12 0 0 12 283.55999 651.83999 Tm
+-0.00299 Tc
+0.00299 Tw
+( << )Tj 
+/N14 1 Tf
+1.61999 0 TD
+0 Tc
+0 Tw
+(\002)Tj 
+/N24 1 Tf
+6 0 0 6 312.35998 648.83999 Tm
+(A)Tj 
+12 0 0 12 316.67999 651.83999 Tm
+-0.00109 Tc
+0.00109 Tw
+( I gave you early in the course. )Tj 
+-20.38999 -1.16999 TD
+0 Tc
+0 Tw
+( )Tj 
+0 -15.94999 TD
+( )Tj 
+0 -1.66999 TD
+-0.00219 Tc
+0.11219 Tw
+(What)Tj [-4.19999 ]TJ ( t)Tj [-4.19999 ]TJ (h)Tj [-2.19999 ]TJ (e program)Tj [-4.19999 ]TJ ( AP)Tj [-6.19999 ]TJ (C)Tj [-5.19999 ]TJ (L)Tj [-1.19999 ]TJ (N does, i)Tj [-4.19999 ]TJ (n)Tj [-2.19999 ]TJ ( effect)Tj [-4.19999 ]TJ (, i)Tj [-4.19999 ]TJ (s)Tj [-3.19999 ]TJ ( t)Tj [-4.19999 ]TJ (o)Tj [-2.19999 ]TJ ( )Tj 
+20.09999 0 TD
+0.00079 Tc
+0.09919 Tw
+(sta)Tj [4.79998 ]TJ (r)Tj [3.79998 ]TJ (t )Tj [-10 ]TJ (with )Tj [-10 ]TJ (the)Tj [4.79998 ]TJ ( brighte)Tj [4.79998 ]TJ (s)Tj [-0.19999 ]TJ (t pixe)Tj [4.79998 ]TJ (l in the)Tj [4.79998 ]TJ ( dirty ma)Tj [4.79998 ]TJ (p, )Tj 
+-20.09999 -1.16999 TD
+-0.00059 Tc
+0.07058 Tw
+(convolve it with the synthesized beam image, then)Tj 
+20.68998 0 TD
+-0.00048 Tc
+0.06048 Tw
+( subtract 1/10 of that convolved pattern from )Tj 
+-20.68998 -1.16999 TD
+0.03048 Tw
+(the )Tj [-10 ]TJ (map. Thus, in effect, it\222s subtr)Tj 
+13.69999 0 TD
+-0.00068 Tc
+0.03068 Tw
+(acting off 1/10 of the amplitude of )Tj 
+14.21998 0 TD
+-0.00129 Tc
+0.03129 Tw
+(t)Tj [-3.29998 ]TJ (h)Tj [-1.29998 ]TJ (e si)Tj [-3.29998 ]TJ (de l)Tj [-3.29998 ]TJ (obes. It)Tj [-3.29998 ]TJ ( t)Tj [-3.29998 ]TJ (h)Tj [-1.29998 ]TJ (en seeks )Tj 
+-27.91999 -1.16999 TD
+-0.00019 Tc
+0.13018 Tw
+(out the next brightest pixel, and so on. It does )Tj 
+19.78999 0 TD
+-0.00039 Tc
+0.12039 Tw
+(this )Tj [-10 ]TJ (n )Tj [-10 ]TJ (times, )Tj [-10 ]TJ (where n is specified by the input )Tj 
+-19.78999 -1.16999 TD
+-0.00079 Tc
+0.01078 Tw
+(parameter NITER. Hint:  in a dirty map like the )Tj 
+19.37998 0 TD
+-0.00059 Tc
+0.01058 Tw
+(one you\222re working with, it\222s a good idea to start )Tj 
+-19.37998 -1.16999 TD
+-0.00079 Tc
+0.00079 Tw
+(off with a light clean, say NITER = 500. )Tj 
+0 -1.5 TD
+-0.00099 Tc
+0.05099 Tw
+( )Tj [-2700 ]TJ (A )Tj [-10 ]TJ (couple of further remarks. First, if one s)Tj 
+20.31999 0 TD
+-0.00048 Tc
+0.05049 Tw
+(ource is the brightest in)Tj 
+9.57998 0 TD
+-0.00099 Tc
+0.05099 Tw
+( the field, the cleaning )Tj 
+-29.89999 -1.16999 TD
+0.00048 Tc
+0.22949 Tw
+(progra)Tj [4.5 ]TJ (m)Tj [-1.5 ]TJ ( will e)Tj [4.5 ]TJ (sse)Tj [4.5 ]TJ (ntia)Tj [4.5 ]TJ (lly de)Tj [4.5 ]TJ (a)Tj [4.5 ]TJ (l)Tj [-1.5 ]TJ ( only with it \(a)Tj [4.5 ]TJ ( )Tj [10 ]TJ (ve)Tj 
+20.47999 0 TD
+0.00019 Tc
+0.21978 Tw
+(ry bright sourc)Tj [4.19999 ]TJ (e)Tj [4.19999 ]TJ ( c)Tj [4.19999 ]TJ (ould c)Tj [4.19999 ]TJ (onta)Tj [4.19999 ]TJ (i)Tj [-1.79998 ]TJ (n the)Tj [4.19999 ]TJ ( brighte)Tj [4.19999 ]TJ (s)Tj [-0.79998 ]TJ (t )Tj [220 ]TJ ( )Tj 
+-20.47999 -1.16999 TD
+-0.00068 Tc
+0.05068 Tw
+(500 pixels in your map\). Therefor)Tj 
+13.77999 0 TD
+-0.00099 Tc
+0.04098 Tw
+(e, )Tj [-10 ]TJ (if )Tj [-10 ]TJ (you )Tj [-10 ]TJ (do )Tj [-10 ]TJ (have )Tj [-10 ]TJ (a )Tj [-10 ]TJ (bright source, you may need to clean more )Tj 
+-13.77999 -1.16999 TD
+0.17098 Tw
+(deeply. )Tj [-10 ]TJ (This is an art, not a science, and I\222)Tj 
+18.38999 0 TD
+-0.00059 Tc
+0.17059 Tw
+(ll expect you to play around considerably with a )Tj 
+-18.38999 -1.16999 TD
+-0.00028 Tc
+0.00028 Tw
+(number of iterations in APCLN. )Tj 
+0 -1.5 TD
+-0.00079 Tc
+0.06079 Tw
+( )Tj [-2690 ]TJ (Next, the program subtracts )Tj 
+14.57998 0 TD
+-0.00059 Tc
+0.06059 Tw
+(1/10 of the amplitude of the )Tj 
+11.72999 0 TD
+-0.00119 Tc
+0.05119 Tw
+(beam pattern for each iteration. )Tj 
+-26.30999 -1.16999 TD
+-0.00019 Tc
+0.03019 Tw
+(Pretty clearly, if it ran to its )Tj 
+11.47999 0 TD
+0.00039 Tc
+0.02958 Tw
+(ultimate limit, it would subtract all )Tj 
+14.32998 0 TD
+-0.00079 Tc
+0.03079 Tw
+(the sources in the map. That you )Tj 
+-25.80999 -1.16999 TD
+(don't want. So you need to \223restore\224 )Tj 
+14.91999 0 TD
+-0.00099 Tc
+0.03099 Tw
+(the clean sources, rid of their si)Tj 
+12.67999 0 TD
+-0.00039 Tc
+0.02038 Tw
+(de )Tj [-10 ]TJ (lobes, to the map. That is )Tj 
+-27.59999 -1.16999 TD
+-0.00068 Tc
+0.08068 Tw
+(done by specifying an estimate )Tj [10 ]TJ (of )Tj [10 ]TJ (the )Tj [10 ]TJ (beam )Tj [10 ]TJ (size\227th)Tj 
+21.50999 0 TD
+-0.00088 Tc
+0.07089 Tw
+(is rather complicated )Tj 
+8.82998 0 TD
+-0.00099 Tc
+0.07099 Tw
+(feature I\222ll explain to )Tj 
+-30.33999 -1.16999 TD
+-0.00028 Tc
+0.00028 Tw
+(you in real time. )Tj 
+0 -1.5 TD
+0.00009 Tc
+0.05989 Tw
+( )Tj [-2690 ]TJ (Your task is to fiddle with APCLN until you )Tj 
+21.62998 0 TD
+-0.00109 Tc
+0.06109 Tw
+(have a clean map that looks like the map I )Tj 
+-21.62998 -1.16999 TD
+-0.00088 Tc
+0.05088 Tw
+(made, called \223first map.\224)Tj 
+10.14999 0 TD
+-0.00099 Tc
+( When you\222re happy )Tj [10 ]TJ (with )Tj 
+/N27 1 Tf
+10.67999 0 TD
+0 Tw
+(your)Tj 
+/N24 1 Tf
+1.82998 0 TD
+-0.00019 Tc
+0.04019 Tw
+( map, print it out. I also want you to use )Tj 
+-22.65998 -1.16999 TD
+-0.00059 Tc
+0.16059 Tw
+(TVWIN and IMSTAT to find the rms noise of th)Tj 
+21 0 TD
+0.00059 Tc
+0.14939 Tw
+(is )Tj [-10 ]TJ (c)Tj [4.59999 ]TJ (l)Tj [-1.39999 ]TJ (e)Tj [4.59999 ]TJ (a)Tj [4.59999 ]TJ (n)Tj [0.59999 ]TJ ( )Tj [-10 ]TJ (ma)Tj [4.59999 ]TJ (p )Tj [-10 ]TJ (\(whic)Tj [4.59999 ]TJ (h)Tj [0.59999 ]TJ ( ha)Tj [4.59999 ]TJ (s CLN a)Tj [4.59999 ]TJ (s)Tj [-0.39999 ]TJ ( its ta)Tj [4.59999 ]TJ (g in )Tj 
+-21 -1.16999 TD
+-0.00028 Tc
+0 Tw
+(MCAT\). )Tj 
+0 -1.5 TD
+-0.00059 Tc
+0.00059 Tw
+( )Tj [-2750 ]TJ (rms noise of clean map = __________. )Tj 
+T*
+-0.00119 Tc
+0.04119 Tw
+(If you\222ve cleaned the map correctly, you should see )Tj 
+21.25 0 TD
+-0.00039 Tc
+0.03039 Tw
+(that )Tj [-10 ]TJ (the )Tj [-10 ]TJ (rms noise is less than you found for )Tj 
+-21.25 -1.16999 TD
+0 Tc
+0.04998 Tw
+(the dirty map\227that is, getting rid of)Tj 
+14.76998 0 TD
+0.00088 Tc
+0.04908 Tw
+( a)Tj [4.89999 ]TJ (ll the)Tj [4.89999 ]TJ ( side)Tj [4.89999 ]TJ ( lobe)Tj [4.89999 ]TJ (s re)Tj [4.89999 ]TJ (duc)Tj [4.89999 ]TJ (e)Tj [4.89999 ]TJ (s)Tj [-0.09999 ]TJ ( the)Tj [4.89999 ]TJ ( sta)Tj [4.89999 ]TJ (tistic)Tj [4.89999 ]TJ (a)Tj [4.89999 ]TJ (l)Tj [-1.09999 ]TJ ( noise)Tj [4.89999 ]TJ ( in the)Tj [4.89999 ]TJ ( ma)Tj [4.89999 ]TJ (p )Tj [10 ]TJ (a)Tj [4.89999 ]TJ (s)Tj [-0.09999 ]TJ ( )Tj 
+-14.76998 -1.16999 TD
+-0.00009 Tc
+0.00009 Tw
+(well as its visual clutter. You should also be able)Tj 
+19.53999 0 TD
+-0.00068 Tc
+0.00068 Tw
+( to see many more sources than in the dirty map. )Tj 
+ET
+1 1 1 rg
+72.05999 634.73999 467.75999 -170.87998 rf
+0 0 0 rg
+q
+467.87998 0 0 -171 72 634.79998 cm
+
+_op? setoverprint
+BI
+/Width 539
+/Height 197
+/DecodeParms [null <</K -1 
+/Columns 539 >>  ]
+/Filter [/ASCII85Decode /CCITTFaxDecode ]
+/BitsPerComponent 1
+/Decode [0 1]
+/ImageMask true
+ID
+-Hb=SQ,)=qC4[\nFG#%5"@q5H:)Ql)@*?K9O-bdCHiJI)765`\"B26fej"*OWZ5(i
+0nKZSs2hnr^FCB#klN<VO%%XO_k[oF[^WMBVe"/nME=/bX@G?07hOg%*_2@RGoT>:
+`-ECoOlU,8,KQmZA;DElO!BJO4HC`.i])uDM"3Zh,KTF8O!BJO4MUprs8L6,;/cL7
+s8W-!s8W,o1TcmEs8W-!s8W-!s8En%8h9rAs8W,i3+RW//I[^hSX%.WLRj[KCE]E.
++p0hA6r4^E1,2([83m:[&58nf;KI`Cor;6E5_9<-:a5-HaqUM:8]!*C^6"7'7*;Jb
+M*an9P:K)o'.AOVd5RlDd5$MY=8#W-."qOSLeRGJ<YIV2lH5h1IY9Q7P6cYroKWBT
+ao\F>s6QKp^]47sP*c4Ks8W,cU3+0Mrq69hJ,fQKfh*]Cs8+2j0E;'cJ%o@Z?glVH
+s0@;Us8W-!s8W-!s()V8s8W,>+91r:[@Ub*s8W-!s8VdjH=-^Ps8W,u6/V]q?%;cR
+s6!K,^]&g0oNctGScA`MrZhI0Wlij^s7oOls8W)Ms6Nhea8c2>N^*5;<58%4-(J?B
+s8W-!rlWfYs8W-!s8W-!s8W-!r,Mc:s8UBoenm1LV>pSqs7QEbs8W-!r]'rXm%EZ+
+<*=qJs8VinhuDPtEI[tSAKS_ibHFS=s4LBOfi+^e@Hhaf((aUh2k[pioV74O.[XXJ
+J,fQKs8W-!s8W-!s8W-!s8W-!s8W-!s8W-!j8]/Zs,I(%!X\~>
+EI
+
+Q
+PDFVars/TermAll get exec end end
+userdict /pgsave get restore
+showpage
+%%PageTrailer
+%%EndPage
+%%Page: 5 5
+%%BeginPageSetup
+userdict /pgsave save put
+PDFVars begin PDF begin PDFVars/InitAll get exec
+0 0 612 792 true PDF begin PDFVars begin AS end end
+%%EndPageSetup
+0 0 612 792 RC
+BT
+/N24 1 Tf
+12 0 0 12 72 744.59999 Tm
+0 0 0 rg
+/N28 /ExtGState findRes gsDI
+19 Tc
+0 Tw
+( 5)Tj 
+ET
+q
+
+303 741.95999 6 14.03999 re
+W n 
+BT
+12 0 0 12 309 744.59999 Tm
+0 Tc
+( )Tj 
+ET
+Q
+BT
+12 0 0 12 72 708.47999 Tm
+-0.00099 Tc
+(X. )Tj 
+/N25 1 Tf
+2.25 0 TD
+-0.00169 Tc
+0.00169 Tw
+(Measu)Tj [-5.69999 ]TJ (ri)Tj [-3.69999 ]TJ (n)Tj [-5.69999 ]TJ (g)Tj [-1.69999 ]TJ ( th)Tj [-5.69999 ]TJ (e Posi)Tj [-3.69999 ]TJ (ti)Tj [-3.69999 ]TJ (on)Tj [-5.69999 ]TJ ( an)Tj [-5.69999 ]TJ (d)Tj [-5.69999 ]TJ ( Fl)Tj [-3.69999 ]TJ (u)Tj [-5.69999 ]TJ (x)Tj [-1.69999 ]TJ ( of S)Tj [-5.69999 ]TJ (o)Tj [-1.69999 ]TJ (u)Tj [-5.69999 ]TJ (rces)Tj 
+/N24 1 Tf
+18.61999 0 TD
+0 Tc
+0 Tw
+( )Tj 
+-20.86999 -1.5 TD
+-0.00119 Tc
+0.08119 Tw
+( )Tj [-2670 ]TJ (Once you have a clean map, with lots of ra)Tj 
+20.78999 0 TD
+-0.00039 Tc
+0.07038 Tw
+(dio )Tj [-10 ]TJ (sources visible, you\222d like to know what )Tj 
+-20.78999 -1.16999 TD
+-0.00059 Tc
+0.16059 Tw
+(their )Tj [-10 ]TJ (flux )Tj [-10 ]TJ (density )Tj [-10 ]TJ (is. )Tj [-10 ]TJ (That can be done by us)Tj 
+18.95999 0 TD
+(ing the programs TVWIN and IMFIT. First use )Tj 
+-18.95999 -1.16999 TD
+-0.00099 Tc
+0.11099 Tw
+(TVWIN to draw a box fairly tightly around each s)Tj 
+21.02999 0 TD
+-0.00059 Tc
+0.11059 Tw
+(ource. Then simply type \223go imfit\224 and the )Tj 
+-21.02999 -1.16999 TD
+0.00019 Tc
+0.20979 Tw
+(progra)Tj [4.19999 ]TJ (m)Tj [-1.79998 ]TJ ( will a)Tj [4.19999 ]TJ (n)Tj [0.19999 ]TJ (a)Tj [4.19999 ]TJ (l)Tj [-1.79998 ]TJ (yz)Tj [4.19999 ]TJ (e)Tj [4.19999 ]TJ ( the)Tj [4.19999 ]TJ ( sourc)Tj [4.19999 ]TJ (e)Tj [4.19999 ]TJ (s)Tj [-0.79998 ]TJ (. It doe)Tj [4.19999 ]TJ (s this )Tj 
+20.00999 0 TD
+0.00048 Tc
+0.19949 Tw
+(by )Tj [-10 ]TJ (fitting )Tj [-10 ]TJ (a)Tj [4.5 ]TJ ( two-dime)Tj [4.5 ]TJ (nsiona)Tj [4.5 ]TJ (l Ga)Tj [4.5 ]TJ (ussia)Tj [4.5 ]TJ (n)Tj [0.5 ]TJ ( to the)Tj [4.5 ]TJ ( )Tj 
+-20.00999 -1.16999 TD
+-0.00099 Tc
+0.04098 Tw
+(brightest source in the window you have drawn. Once )Tj 
+22.14999 0 TD
+-0.00079 Tc
+0.03079 Tw
+(the Gaussian is fit, the program integrates )Tj 
+-22.14999 -1.16999 TD
+-0.00059 Tc
+0.09059 Tw
+(the flux underneath that two-dimensional Gaussian)Tj 
+20.83999 0 TD
+( curve and determines its central position. It )Tj 
+-20.83999 -1.16999 TD
+0.02069 Tw
+(then reports these numbers as the flux density of)Tj 
+19.51998 0 TD
+-0.00048 Tc
+0.01049 Tw
+( )Tj [-10 ]TJ (the )Tj [-10 ]TJ (source )Tj [-10 ]TJ (and its position in the sky. Each time )Tj 
+-19.51998 -1.16999 TD
+-0.00009 Tc
+0.14009 Tw
+(you run IMFIT, it will give you a )Tj 
+14.69999 0 TD
+-0.00149 Tc
+0.13148 Tw
+(crude map of the source, of )Tj 
+11.93998 0 TD
+-0.00039 Tc
+0.13038 Tw
+(the two-dimensional Gaussian )Tj 
+-26.63999 -1.16999 TD
+-0.00109 Tc
+0.00109 Tw
+(model )Tj [-10 ]TJ (and )Tj [-10 ]TJ (of the difference between those two. Look )Tj 
+21.57998 0 TD
+-0.00059 Tc
+0.00059 Tw
+(at the third of these to)Tj 
+8.73999 0 TD
+-0.00228 Tc
+0.00228 Tw
+( see whether there are )Tj 
+-30.31999 -1.16999 TD
+-0.00169 Tc
+0.08169 Tw
+(huge discrepancies\227if there are,)Tj 
+13.35998 0 TD
+-0.00028 Tc
+0.07029 Tw
+( )Tj [-10 ]TJ (your )Tj [-10 ]TJ (Gaussian model is proba)Tj 
+12.54998 0 TD
+-0.00048 Tc
+0.07049 Tw
+(bly not a very good fit, and you )Tj 
+-25.90998 -1.16999 TD
+0.12049 Tw
+(can\222t trust the flux densities very much. We will )Tj 
+20.60998 0 TD
+-0.00068 Tc
+0.12069 Tw
+(talk about how to measure flux densities )Tj [10 ]TJ (for )Tj 
+-20.60998 -1.16999 TD
+-0.00088 Tc
+0.00088 Tw
+(complicated sources, several of )Tj 
+12.76998 0 TD
+-0.00079 Tc
+0.00079 Tw
+(which may appear in your map. )Tj 
+-12.76998 -1.5 TD
+-0.00009 Tc
+0.04008 Tw
+( )Tj [-2710 ]TJ (The )Tj [-10 ]TJ (next )Tj [-10 ]TJ (thing to turn in is a list of sour)Tj 
+19.30999 0 TD
+-0.00129 Tc
+0.04129 Tw
+(ces in increasing order )Tj 
+9.40998 0 TD
+-0.00019 Tc
+0.04019 Tw
+(of right ascension, giving )Tj 
+-28.71998 -1.16999 TD
+-0.00028 Tc
+0.02029 Tw
+(their positions in right ascension and declination and )Tj 
+21.47999 0 TD
+-0.00019 Tc
+0.01019 Tw
+(the)Tj [3.79998 ]TJ (i)Tj [-2.19999 ]TJ (r )Tj [-10 ]TJ (flux )Tj [-10 ]TJ (de)Tj [3.79998 ]TJ (nsity )Tj [-10 ]TJ (with its a)Tj [3.79998 ]TJ (ssoc)Tj [3.79998 ]TJ (i)Tj [-2.19999 ]TJ (a)Tj [3.79998 ]TJ (t)Tj [-2.19999 ]TJ (e)Tj [3.79998 ]TJ (d)Tj [-0.19999 ]TJ ( e)Tj [3.79998 ]TJ (rror. I )Tj 
+-21.47999 -1.16999 TD
+-0.00059 Tc
+0.13059 Tw
+(would )Tj [-10 ]TJ (also ask you to comment on the shape of )Tj 
+20.56999 0 TD
+-0.00129 Tc
+0.13128 Tw
+(each source, as seen in your clean map, and )Tj 
+-20.56999 -1.16999 TD
+-0.00059 Tc
+0.00059 Tw
+(hence the likelihood that your flux de)Tj 
+14.97999 0 TD
+-0.00129 Tc
+0.00129 Tw
+(nsity measurements are accurate. )Tj 
+-14.97999 -2.00999 TD
+0 Tw
+(XI. )Tj 
+/N25 1 Tf
+2.25 0 TD
+-0.00209 Tc
+0.00209 Tw
+(Pri)Tj [-4.09999 ]TJ (m)Tj [0.89999 ]TJ (ary B)Tj [-5.09999 ]TJ (e)Tj [1.89999 ]TJ (am Correcti)Tj [-4.09999 ]TJ (o)Tj [-2.09999 ]TJ (n)Tj 
+/N24 1 Tf
+11.18998 0 TD
+0 Tc
+0 Tw
+( )Tj 
+-13.43998 -1.5 TD
+-0.00079 Tc
+0.26078 Tw
+( )Tj [-2490 ]TJ (The task P)Tj [-4.79998 ]TJ (BCORR corrects for the primary )Tj 
+22.37998 0 TD
+-0.00099 Tc
+0.25099 Tw
+(beam )Tj [-10 ]TJ (response. Recall that the F)Tj [-5 ]TJ (ourier )Tj 
+-22.37998 -1.21998 TD
+-0.00088 Tc
+0.12089 Tw
+(Transform of V\(u, v\) gives the )Tj 
+/N27 1 Tf
+13.21998 0 TD
+-0.00019 Tc
+0 Tw
+(convolution)Tj 
+/N24 1 Tf
+4.71998 0 TD
+-0.00079 Tc
+0.11079 Tw
+( )Tj [-10 ]TJ (of the true sky map )Tj 
+8.87998 0 TD
+-0.00219 Tc
+0.11219 Tw
+(and t)Tj [-4.19999 ]TJ (h)Tj [-2.19999 ]TJ (e beam)Tj [-4.19999 ]TJ ( pat)Tj [-4.19999 ]TJ (t)Tj [-4.19999 ]TJ (e)Tj [1.79998 ]TJ (rn F)Tj [-6.19999 ]TJ (\()Tj 
+/N14 1 Tf
+9.91999 0 TD
+0 Tc
+0 Tw
+(\003)Tj 
+/N24 1 Tf
+0.46998 0 TD
+(, )Tj 
+/N14 1 Tf
+0.60998 0 TD
+(\004)Tj 
+/N24 1 Tf
+0.59999 0 TD
+-0.00149 Tc
+(\). )Tj 
+-38.41999 -1.21998 TD
+0.00149 Tc
+0.12849 Tw
+(PBCORR divides out F\()Tj 
+/N14 1 Tf
+10.15998 0 TD
+0 Tc
+0 Tw
+(\003)Tj 
+/N24 1 Tf
+0.46998 0 TD
+(, )Tj 
+/N14 1 Tf
+0.62998 0 TD
+(\004)Tj 
+/N24 1 Tf
+0.59999 0 TD
+0.00039 Tc
+0.12959 Tw
+(\). Notic)Tj [4.39999 ]TJ (e)Tj [4.39999 ]TJ ( tha)Tj [4.39999 ]TJ (t)Tj [-1.59999 ]TJ ( the)Tj [4.39999 ]TJ ( e)Tj [4.39999 ]TJ (ffe)Tj [4.39999 ]TJ (c)Tj [4.39999 ]TJ (t)Tj [-1.59999 ]TJ ( is to inc)Tj [4.39999 ]TJ (r)Tj [3.39999 ]TJ (e)Tj [4.39999 ]TJ (a)Tj [4.39999 ]TJ (s)Tj [-0.59999 ]TJ (e)Tj [4.39999 ]TJ ( the)Tj [4.39999 ]TJ ( noise)Tj [4.39999 ]TJ ( le)Tj [4.39999 ]TJ (ve)Tj [4.39999 ]TJ (l towa)Tj [4.39999 ]TJ (rds the)Tj [4.39999 ]TJ ( )Tj 
+-11.85998 -1.16999 TD
+-0.00028 Tc
+0.22029 Tw
+(edge of the maps\227think through why this shoul)Tj 
+20.83999 0 TD
+-0.00088 Tc
+0.22088 Tw
+(d be so, and write )Tj [10 ]TJ (down )Tj [10 ]TJ (a )Tj [10 ]TJ (brief )Tj [10 ]TJ (statement )Tj 
+-20.83999 -1.16999 TD
+0 Tc
+0 Tw
+(explaining this result. )Tj 
+0 -1.54998 TD
+0.00019 Tc
+0.08979 Tw
+( )Tj [-2660 ]TJ (A sourc)Tj [4.19999 ]TJ (e)Tj [4.19999 ]TJ ( not a)Tj [4.19999 ]TJ (t)Tj [-1.79998 ]TJ ( the)Tj [4.19999 ]TJ ( pha)Tj [4.19999 ]TJ (se)Tj [4.19999 ]TJ ( a)Tj [4.19999 ]TJ (nd ma)Tj [4.19999 ]TJ (p c)Tj [4.19999 ]TJ (e)Tj [4.19999 ]TJ (n)Tj [0.19999 ]TJ (te)Tj [4.19999 ]TJ (r will be)Tj [4.19999 ]TJ ( \223)Tj [4.19999 ]TJ (down-we)Tj [4.19999 ]TJ (ighte)Tj [4.19999 ]TJ (d)Tj [0.19999 ]TJ (\224)Tj [4.19999 ]TJ ( by F\()Tj 
+/N14 1 Tf
+33.29998 0 TD
+0 Tc
+0 Tw
+(\003)Tj 
+/N24 1 Tf
+0.46998 0 TD
+(, )Tj 
+/N14 1 Tf
+0.57998 0 TD
+(\004)Tj 
+/N24 1 Tf
+0.59999 0 TD
+0.00039 Tc
+0.07958 Tw
+(\) until the)Tj [4.39999 ]TJ ( )Tj 
+-34.94999 -1.16999 TD
+-0.00028 Tc
+0.03028 Tw
+(image is PBCORR\222d. For that reason, to measure )Tj [10 ]TJ (th)Tj 
+21 0 TD
+-0.00109 Tc
+0.02108 Tw
+(e true flux density of a source not at the map )Tj 
+-21 -1.16999 TD
+-0.00028 Tc
+0.00028 Tw
+(center, you should use IMFT on the PBCORR\222d map. )Tj 
+ET
+PDFVars/TermAll get exec end end
+userdict /pgsave get restore
+showpage
+%%PageTrailer
+%%EndPage
+%%Trailer
+%%DocumentProcessColors: Cyan Magenta Yellow Black
+%%DocumentNeededResources:
+%%+ font Times-Italic
+%%+ font Times-Bold
+%%+ font Symbol
+%%+ font Times-Roman
+%%EOF

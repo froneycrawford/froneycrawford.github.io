@@ -1,0 +1,42 @@
+Some of you expressed concern that the midterm exam #2 questions did
+not relate to the problems covered in lecture, HW, and the review
+packets.
+
+I have looked through those sources and have identified the following
+problems which I believe are in fact similar to the exam questions. I
+urge to to look over these and consider the connections. If you still
+feel that the exam was not representative then please come talk to me.
+
+EXAM PROBLEM #1 - satellite going around Earth 
+
+PS #5, problem #7 - lunar module
+practice exam, problem II-1 
+Ch. 5 notes, circular orbits examples
+
+EXAM PROBLEM #2 - masses falling toward each other
+
+PS #6, problem #7 - space probe 
+practice exam, problem I-2 
+Ch. 6 notes, energy conservation
+
+EXAM PROBLEM #3 - billiard balls collide
+
+PS #7, problem #2 - batter in boat
+PS #7, problem #6 - colliding skaters
+Physics in Forensics review problem
+Ch. 7 notes - 2D collisions
+
+EXAM PROBLEM #4 - merry-go-round
+
+PS #8, problem #6 - clay wad hits wheel
+practice exam, problem III-1  
+Ch. 8 notes, conservation of angular momentum
+
+EXAM PROBLEM #5 - yo-yo
+
+Ch. 8 notes, rolling wheel example
+Ch, 8 notes, moment of inertia with pulleys
+
+Note that none of these problems are EXACTLY like the ones on the
+exam, but they use the same concepts. I wanted to see if I could get
+you to connect common themes to solve a new set of problems.

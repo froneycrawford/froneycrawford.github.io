@@ -1,0 +1,66 @@
+!        PHSPshl
+!
+! program to plot phase space trajectories for the simple
+!   harmonic oscillator.
+! this program will either print out the values of position, x
+!   and velocity, v, or plot them.
+!
+input prompt "Input 0 for print, 1 for plot:": noptp
+input prompt "Input amplitude: ": A
+input prompt "Input time step and max. time:": tstep, tmax
+if noptp = 1 then
+     clear
+     let xmin = -1.33333*A
+     let xmax = 1.33333*A
+     let ymin = -1.1*A
+     let ymax = 1.1*A
+     call axes(xmin,xmax,ymin,ymax)
+end if
+if noptp = 0 then
+     print "time","position","velocity"
+end if
+for t = 0 to tmax step tstep
+     let x = A*cos(t)
+     let v = A                        !Replace with correct functional
+     pause .1                         !  form.
+     if noptp = 1 then 
+          plot x,v;
+     else
+          print t,x,v
+     end if
+next t
+end
+!
+!
+sub axes(xmin,xmax,ymin,ymax)
+     let xdel=xmax-xmin
+     let xb=xdel/10000
+     let ydel=ymax-ymin
+     let yb=ydel/10000
+     set window xmin-xb,xmax+xb,ymin-yb,ymax+yb
+     plot 0,0;
+     plot 0,ymax;
+     plot 0,ymin
+     plot xmin,0;
+     plot xmax,0
+     let xtstep=xdel/8
+     let xtsize=ydel/60
+     for x=0 to xmax step xtstep            !tick marks on x-axis
+          plot x,xtsize;
+          plot x,0
+     next x
+     for x = 0 to xmin step -xtstep
+          plot x,xtsize;
+          plot x,0
+     next x
+     let ytstep=ydel/6
+     let ytsize=xdel/100
+     for y=0 to ymax step ytstep            !tick marks on y-axis
+          plot 0,y;
+          plot ytsize,y
+     next y
+     for y=0 to ymin step -ytstep
+          plot 0,y;
+          plot ytsize,y
+     next y
+end sub

@@ -1,0 +1,43 @@
+Thank you for providing feedback about how Physics 101 is going. I
+have read your comments and would like to address some of the things
+you mention.  First, there was good support for concept tests and
+demos and the examples (and the colored chalk). I will try to continue
+with these as is as much as I can so I can keep you involved and
+motivated in the lecture.
+
+On the negative side, some felt that the examples in class have been
+too easy. I will try to make them a little more complex, and the
+material itself will get more complex as we go along. This is usually
+more of a problem at the start of the course where many people have
+seen the material before. However, since not everyone has, it is
+important to go step by step through the introductory material. Don't
+worry - there will be plenty of more complex physics ahead for
+everybody. There were some concerns that the homework problems were
+confusing and did not directly follow from class examples. Two things
+about this: first, you should come see me or ask for clarification in
+lecture if something about a problem isn't clear. I am happy to spend
+a few minutes clearing this sort of thing at the start of class (I
+don't want to go through the whole full-blown problem in class, but I
+can help make it clear how to proceed). Second, the homework is meant
+as another, separate mode of learning. That is, I aim to have you
+think some about what the homework is asking on your own and how the
+problem relates to the overall concepts. You shouldn't expect plug and
+chug problems generally, but rather problems that will test your
+conceptual understanding. Sometimes this requires spending some time
+just thinking about a problem.  Several people thought the pace was
+too slow, an equal number of people thought it was too fast, and a few
+people thought it was just right. So I suppose I'll try to keep the
+pace as it is. Several people also wanted more emphasis on the
+important equations to use. These are usually in the book as boxed
+shaded equations, so refer to the book if in doubt. Also, see which
+ones we regularly use in examples.
+
+Finally, I would like to make an appeal for participation. A lot of
+people have been quiet in class, and it is hard for me to gauge
+whether something is making sense to you if nobody asks questions. My
+assumption in that case is that everyone understands it, and I can
+move on. That is OK if it is the case, but if it is not, you must take
+that opportunity to raise your hand and ask for more explanation. If
+not, then you'll not have the right foundation for what comes later,
+and it will be very hard to catch up. So I leave it up to you to make
+sure that you get what you need in this context from lecture.

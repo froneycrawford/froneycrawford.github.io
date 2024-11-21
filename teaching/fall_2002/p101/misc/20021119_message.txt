@@ -1,0 +1,22 @@
+Just some comments on the homework and tests for the class.  I thought
+I would write this since some of you have expressed concern that the
+homeworks are not representative of what you have seen on the
+midterms.
+
+First, the tests are not designed to too closely mimic the
+homeworks. The reason for this is that the tests are meant for you to
+extend the concepts you learn in lecture, recitation, and homework in
+a slightly new and novel situation. It is a test of your understanding
+of the concepts and your skill in applying them in problems you have
+not seen before. In short, the same concepts are involved, but not
+necessarily the same problems.
+
+Second, the homeworks can be considered a second mode of learning in
+the course separate from the tests. One reason the homeworks are worth
+so much in the course (worth more than even the final exam) is that
+they are meant not just as preparation material for the tests, but are
+also valuable in and of themselves for learning physics. If and when
+you take the MCAT, for instance, I doubt you will see problems like
+the ones that appear on the tests, but you may encounter problems
+similar to the homework problems.
+

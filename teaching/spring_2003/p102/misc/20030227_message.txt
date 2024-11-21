@@ -1,0 +1,5 @@
+On the course web page I have posted some links to java applet
+animations which may be helpful to you in visualizing some of the
+subjects we discuss in the course. The vector and field simulators may
+be particularly helpful since there are hard to visualize. Check them
+out and try out different configurations in each one.

@@ -1,0 +1,52 @@
+A question arose today in class in the example of the parallel plate
+capacitor (the two plates which were held at a potential difference).
+The question was what happens if the path vector ds points left
+against the E-field (which points right) when computing the potential
+difference integral between the plates?  I will address this in
+recitation this week with a quick analysis on the board.
+
+Now for some exam information:
+
+First, there is no practice exam. I don't have the material from last
+year and don't know if the same material was covered at the same rate,
+so you have the following exam study materials: lecture notes through
+to the first part of today's lecture, recitation group problems #1,
+problem sets #1 through #3 (be sure to download homework solutions
+from the web!), and reading from relevant sections of Hecht Chapters
+10, 11, and 15. This will cover everything that is on the exam. It is
+important that you understand the concepts and problem solving methods
+and when you should apply them. Don't just memorize stuff because then
+you will get stuck if you see a problem in which you have to reason a
+little to figure out how to proceed.
+
+The exam is 50 minutes and will start at 11:35. The exam ends at
+12:25. DON'T BE LATE! if you have a class just before this one, leave
+5 minutes early if necessary to get to the exam.
+
+Do all work in the exam booklet provided.
+
+You can bring in one 3 x 5 index card with equations and constants on
+both sides. The constants used in lecture or on problem sets are fair
+game, but there aren't too many of them that I count in my notes, so
+that shouldn't dominate your card.
+
+Bring a calculator, because you'll need it for some calculations.
+
+Partial credit will be awarded, so it is critical that you make an
+attempt at each problem. Don't just get stuck on one problem. Keep
+moving on the exam (but don't just rush - be deliberate and
+focused). Time will be important since you only have 50 minutes, so be
+mindful of that.
+
+Here is the format of the exam:
+
+One multiple choice problem. This shouldn't take you long.
+
+Four problems of roughly comparable value which ask you to do
+calculations. Each one of these problems has two parts (a and b). That
+averages to about 12 minutes for each of the four problems, so if you
+spend a minute thinking about the problem and then tackle it, you
+should be OK. None of the problems are designed to make you spend a
+lot of time doing very heavy mathematical calculations.
+
+Be sure to stop by and discuss anything that is confusing you.
