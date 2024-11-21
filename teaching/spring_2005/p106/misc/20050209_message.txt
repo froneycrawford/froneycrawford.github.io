@@ -1,0 +1,11 @@
+Driving home today I realized that my explanation of Doug's question
+about diamagnetic materials was completely wrong. Diamagnetism (and
+paramagnetism and ferromagnetism) apply to magnetic fields, not
+electric fields! So for magnetic fields, the analog to the
+permittivity (called the permeability) can indeed be less than one,
+but for electric fields, the dielectric constant has to be bigger than
+one. Qualitatively, you can think of it this way: the atom in the
+dielectric substance gets polarized in the way I described in
+class. The electrons always get pulled and protons pushed by the E
+field. Thus, the induced field always tends to cancel the external
+field. So therefore K is bigger than one.

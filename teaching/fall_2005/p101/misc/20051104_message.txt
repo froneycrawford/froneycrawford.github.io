@@ -1,0 +1,9 @@
+Here is some info about the second midterm exam. You will be provided
+with constants from the front of the Hecht book and the moments of
+inertia from Hecht p. 323.  The exam lasts 55 minutes and is an
+in-class exam on Wed Sep 28 (unless you signed up for the special
+Tuesday session). The test covers Hecht Ch. 5 to 8 (inclusive), HW #5
+to #8 (inclusive), and all the lecture material up to the end of
+Ch. 8. You may bring in two sheets filled with equations and constants
+of your choosing for the test.  The exam cover sheet has additional
+instructions, such as bring a calculator, so be sure to read that.

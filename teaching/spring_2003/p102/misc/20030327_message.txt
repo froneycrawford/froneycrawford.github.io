@@ -1,0 +1,15 @@
+There was some question in class today about what happens when the
+photon has an anergy above vs. below the atomic resonance in the
+context of scattering. Think of it like the slinky demo I did at the
+start of the semester: if you oscillate the slinky too slowly, it
+doesn't respond much and you dont get very much energy transfer to the
+slinky. If you oscillate it too fast, it just shakes and never
+receives much energy from your hand. If you shake it just right, it
+transfers lots of energy and you get a resonance effect. Same thing
+for these atoms: the electron acts like a spring and the scattering
+effect goes way up near the resonance frequency. Away from the
+resonant frequency on either side the electron doesn't respond as
+much, and you dont get much scattering. This also can be used to
+understand the effect of dispersion. Scott will talk about that on
+Friday and I can review it with you briefly on Monday.
+

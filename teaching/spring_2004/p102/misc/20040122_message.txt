@@ -1,0 +1,7 @@
+I made an error in the HW #1 assignment on Problem 2, part (a).  
+
+It should read "...with respect to x", not t. This makes the problem
+much easier. 
+
+I have posted a new version of the HW assignment which reflects this
+minor change. Thanks to those of you who brought this to my attention.

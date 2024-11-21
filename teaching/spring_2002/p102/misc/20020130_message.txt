@@ -1,0 +1,32 @@
+A couple of matters:
+
+1) The physics clinic is on for next week, Mon and Tue from 7 - 9 pm
+in the physics lounge (Stokes 107). Jamie Sundquist and Aaron
+Rosenberg will be staffing it.
+
+2) By popular demand the recitations from now on will be scheduled
+from 2 - 3 pm, since the observatory is free both Tue and Wed at that
+time and everyone should be free during that hour.
+
+3) Labs are due a week after the lab and are to be turned in either in
+the recitation or in the box marked "Physics 102" outside my office.
+
+You can download a new Course Information sheet from the web page
+which outlines this.
+
+Finally, a question came up in recitation today about whether the
+frequency or the wavelength of a traveling wave will change if the
+speed of propagation changes. One situation involved an organ
+pipe. This produces very specific resonant wavelengths which depend on
+the cavity length of the pipe. If we assume that the cavity stays at
+the same length, then the resonant wavelength will not change when the
+sound is produced. Thus, a change in the sound velocity in air would
+mean in this case that the frequency has changed, since the wavelength
+does not change. In another situation, we had a wire under tension. If
+we bang on this wire (to produce waves) at a certain rate, then we are
+fixing the frequency (i.e., the rate at which waves are produced). In
+this case, the wavelength will change when the propagation velocity
+changes (as the tension changes). So in short, whether the wavelength
+or frequency changes when there is a change in propagation velocity
+will depend on what you are holding fixed when you are producing the
+waves.

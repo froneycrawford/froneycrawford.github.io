@@ -1,0 +1,12 @@
+A question came up today regarding why we need to approximate
+sin(theta) as theta for small theta when deriving the angular
+frequency for the pendulum. Here is why: The m*g*sin(theta) force
+vector I drew in the diagram pointed down and to the left, when
+strictly speaking, for SHM, it should point only left (that is, only
+in the -x direction, since x is the displacement). When theta is
+small, that vector points almost left, so the approximation is
+OK. When theta gets big, that vector has too much of a component
+downward and the approximation is no good. So that's why we need to
+consider only small theta (small displacements) for the pendulum when
+using SHM for the analysis.
+

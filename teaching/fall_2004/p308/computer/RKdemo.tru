@@ -1,0 +1,500 @@
+Program RKdemo
+! 
+!  shows use of Runge-Kutta integrator
+!
+declare def func
+print "The program demonstrates the solution"
+print "of a differential equation using the"
+print "Runge-Kutta method."
+print
+print "Consider the differential equation"
+print
+print "        y' = f(x,y)"
+print
+print "where f(x,y) is some reasonably smooth"
+print "function, which gives the slope of y(x)"
+print "at any point (x,y) in the plane."
+print
+print "We consider f(x,y) = -2xy^2.  ('^' denotes"
+print "'to the power' so that the last factor"
+print "in f is y-squared.)"
+print 
+print "The solution in this case is"
+print "         ____1____ "     
+print "        (x^2 + a^2)"
+print "where a is a constant determined by the"
+print "initial value y(x0).  For simplicity"
+print "take x0 = 0 and y(x0) = 1.  Then a = 1."
+print
+print "Press any key to continue"
+do
+loop until key input
+clear
+! These statements select the highest resolution
+!    (for DOS only)
+SET MODE "VGA"
+ASK MODE m$
+IF NewMode$ = "MEDRES" THEN SET MODE "HIRES"
+ASK MODE m$
+!
+ask color printcolor$
+open #1: screen 0, 1, 0, 1
+set window -.2,5,-.2,1.2
+  plot 0,0;
+  plot 5,0
+  plot 0,-.2;
+  plot 0,1.2
+  for i = 1 to 5
+    plot i,0;
+    plot i,.015
+   next i
+  plot text, at .98,-.05: "1"
+  plot text, at 1.98,-.05: "2"
+  plot text, at 2.98,-.05: "3"
+  plot text, at 3.98,-.05: "4"
+  for i = 1 to 5
+    plot 0,i/5;
+    plot .02,i/5
+  next i
+  plot text, at -0.05,.98: "1"
+  plot text, at -0.05,-.02: "0"
+  plot text, at -.1,1.1: "y"
+  plot text, at 4.6,-.1: "x"
+  plot text, at 2,1.4: "Exact solution"
+  SET COLOR "red"
+  for i = 1 to 101
+    let x = (i-1)/20
+    let y = 1/(x^2 + 1)
+    plot x,y;
+  next i
+  plot
+  SET COLOR printcolor$
+pause 1
+open #2: screen .5,1,.5,1
+print
+print
+print
+print "Here is the exact solution of dy/dx = -2xy^2."
+print "Now consider the Euler method solution."
+print
+print "First we'll zoom in on the function a bit."
+pause 4
+window #1
+clear
+set window -.2,2.1,.1,1.1
+plot .9385,1.1;
+plot .9385,.595;
+plot 2.1,.595
+call exact
+window #2
+print "Here is the exact solution of dy/dx = -2xy^2."
+print "Now consider the Euler method solution."
+print
+print "First we'll zoom in on the function a bit."
+print "Using delta x = .125.  We'll integrate to"
+print "   x=1/2, i.e. 4 steps"
+pause 3
+window #1
+let deltax = 0.125
+let x = 0
+let y = 1
+for i = 1 to 4
+    pause 2
+    let slope = func(x,y)
+    call slprint(slope,x,y,i)
+    let ynew = y + slope*deltax
+    let xnew = x + deltax
+    pause 2
+    plot text, at (x+xnew)/2,(y+ynew)/2: "Take the step"
+    plot x,y;
+    plot xnew,ynew
+    plot xnew,ynew - .01;
+    plot xnew,ynew + .01
+    let x = xnew
+    let y = ynew
+next i
+window #2
+let yeuler = ynew
+let yexact = .8
+print "At x=1/2 the exact value is :";yexact
+print "         the Euler value is :";yeuler
+pause 2
+print
+print "Press any key to continue"
+window #1
+get key k
+do
+loop until key input
+get key k
+clear
+Print "The Runge-Kutta approach improves the slope"
+print "estimate for each step by feeling ahead of"
+print "itself as illustrated following.  Before it"
+print "takes a step the 4th-order RK algorithm"
+print "actually evaluates the slope 4 times in"
+print "4 different places.  Therefore, to make this"
+print "a fair comparison, we will use an overall"
+print "delta x = 0.5, 4 times as large as that used"
+print "by the Euler algorithm."
+print
+print "Before demonstrating the RK algorithm, we'll"
+print "put back on the screen the exact function and"
+print "the Euler solution, the latter being marked with"
+print "small plus signs."
+print
+print "Press any key to continue."
+do 
+loop until key input
+get key k
+clear
+call exact
+let x = 0
+let y = 1
+for i = 1 to 4
+    let slope = func(x,y)
+    let ynew = y + slope*deltax
+    let xnew = x + deltax
+    plot xnew,ynew - .01;
+    plot xnew,ynew + .01
+    plot xnew - .015, ynew;
+    plot xnew + .015, ynew
+    let x = xnew
+    let y = ynew
+next i
+let yeuler = ynew
+plot .9385,1.1;
+plot .9385,.595;
+plot 2.1,.595
+window #2
+print "0. Here is the exact function again"
+print "   and the Euler values"
+pause 2
+print "1. Begin by evaluating slope as before."
+pause 2
+let deltax = .5
+let x = 0
+let y = 1
+let m1 = func(x,y)
+let x1 = x + .1
+let y1 = y + .1*m1
+window #1
+plot x,y;
+plot x1,y1
+pause 2
+window #2
+print "2. Take a temporary half step using"
+print "   the slope, m1."
+pause 2
+let x1 = x + deltax/2
+let y1 = y + m1*deltax/2
+window #1
+plot x1-.015,y1+.01;
+plot x1+.015,y1-.01
+plot x1+.015,y1+.01;
+plot x1-.015,y1-.01
+pause 2
+window #2
+print "3. And evaluate the slope, m2, there."
+pause 2
+let m2 = func(x1,y1)
+window #1
+plot x1-.1,y1-.1*m2;
+plot x1+.1,y1+.1*m2
+window #2
+pause 2
+print "4. Go back to start and use that"
+print "   slope, m2, to do a half step again."
+pause 2
+let x2 = x + deltax/2
+let y2 = y + m2*deltax/2
+window #1
+plot x2-.015,y2+.01;
+plot x2+.015,y2-.01
+plot x2+.0115,y2+.01;
+plot x2-.015,y2-.01
+pause 2
+window #2
+print "5. And evaluate the slope there, m3."
+pause 2
+let m3 = func(x2,y2)
+window #1
+plot x2-.1,y2-.1*m3;
+plot x2+.1,y2+.1*m3
+pause 2
+window #2
+print "6. Go back to start and use the"
+print "   slope m3 to take a full step"
+pause 2
+let x3 = x + deltax
+let y3 = y + deltax*m3
+window #1
+plot x3-.015,y3+.01;
+plot x3+.015,y3-.01
+plot x3+.015,y3+.01;
+plot x3-.015,y3-.01
+pause 2
+window #2
+print "7. And evaluate the slope there, m4."
+pause 2
+let m4 = func(x3,y3)
+window #1
+plot x3-.1,y3-.1*m4;
+plot x3+.1,y3+.1*m4
+pause 2
+window #2
+print "8. Determine weighted av. slope"
+print "   m = (m1 + 2*m2 + 2*m3 +m4)/6"
+let slope = (m1 + 2*m2 +2*m3 + m4)/6
+pause 2
+print "9. And take the actual step"
+pause 2
+let xnew = x + deltax
+let ynew = y + deltax*slope
+window #1
+plot x,y;
+plot xnew,ynew
+box area xnew-.01,xnew+.01,ynew-.005,ynew+.005
+pause 2
+window #2
+print "Results at x = 1/2"
+let yexact = .8
+let erreul =  yexact - yeuler
+let errrk4 = yexact - ynew
+print " Exact value: y = ";yexact
+print " Euler value: y = ";yeuler;" Æy = ";erreul
+print " RK-4  value: y = ";ynew;" Æy = ";errrk4
+let ratio = abs(erreul/errrk4)
+print "The RK-4 is better by a factor of ";
+print using "###.": ratio
+pause 3
+print "10. Now take the next 3 R-K steps"
+print "     (w/o commentary)."
+let x = xnew
+let y = ynew
+let m1 = func(x,y)
+let x1 = x + .1
+let y1 = y + .1*m1
+window #1
+plot x,y;
+plot x1,y1
+pause 2
+let x1 = x + deltax/2
+let y1 = y + m1*deltax/2
+plot x1-.015,y1+.01;
+plot x1+.015,y1-.01
+plot x1+.015,y1+.01;
+plot x1-.015,y1-.01
+pause 2
+let m2 = func(x1,y1)
+plot x1-.1,y1-.1*m2;
+plot x1+.1,y1+.1*m2
+pause 2
+let x2 = x + deltax/2
+let y2 = y + m2*deltax/2
+plot x2-.015,y2+.01;
+plot x2+.015,y2-.01
+plot x2+.0115,y2+.01;
+plot x2-.015,y2-.01
+pause 2
+let m3 = func(x2,y2)
+plot x2-.1,y2-.1*m3;
+plot x2+.1,y2+.1*m3
+pause 2
+let x3 = x + deltax
+let y3 = y + deltax*m3
+plot x3-.015,y3+.01;
+plot x3+.015,y3-.01
+plot x3+.015,y3+.01;
+plot x3-.015,y3-.01
+pause 2
+let m4 = func(x3,y3)
+plot x3-.1,y3-.1*m4;
+plot x3+.1,y3+.1*m4
+pause 2
+let slope = (m1 + 2*m2 +2*m3 + m4)/6
+let xnew = x + deltax
+let ynew = y + deltax*slope
+plot x,y;
+plot xnew,ynew
+box area xnew-.01,xnew+.01,ynew-.005,ynew+.005
+pause 2
+window #2
+print "Results at x = 1"
+let yexact = .5
+let errrk4 = yexact - ynew
+print " Exact value: y = ";yexact
+print " RK-4  value: y = ";ynew;" Æy = ";errrk4
+print "Not bad!"
+let x = xnew
+let y = ynew
+let m1 = func(x,y)
+let x1 = x + .1
+let y1 = y + .1*m1
+window #1
+plot x,y;
+plot x1,y1
+pause 2
+let x1 = x + deltax/2
+let y1 = y + m1*deltax/2
+plot x1-.015,y1+.01;
+plot x1+.015,y1-.01
+plot x1+.015,y1+.01;
+plot x1-.015,y1-.01
+pause 2
+let m2 = func(x1,y1)
+plot x1-.1,y1-.1*m2;
+plot x1+.1,y1+.1*m2
+pause 2
+let x2 = x + deltax/2
+let y2 = y + m2*deltax/2
+plot x2-.015,y2+.01;
+plot x2+.015,y2-.01
+plot x2+.0115,y2+.01;
+plot x2-.015,y2-.01
+pause 2
+let m3 = func(x2,y2)
+plot x2-.1,y2-.1*m3;
+plot x2+.1,y2+.1*m3
+pause 2
+let x3 = x + deltax
+let y3 = y + deltax*m3
+plot x3-.015,y3+.01;
+plot x3+.015,y3-.01
+plot x3+.015,y3+.01;
+plot x3-.015,y3-.01
+pause 2
+let m4 = func(x3,y3)
+plot x3-.1,y3-.1*m4;
+plot x3+.1,y3+.1*m4
+pause 2
+let slope = (m1 + 2*m2 +2*m3 + m4)/6
+let xnew = x + deltax
+let ynew = y + deltax*slope
+plot x,y;
+plot xnew,ynew
+box area xnew-.01,xnew+.01,ynew-.005,ynew+.005
+pause 2
+window #2
+print "Results at x = 1.5"
+let yexact = .307692307
+let errrk4 = yexact - ynew
+print " Exact value: y = ";yexact
+print " RK-4  value: y = ";ynew;" Æy = ";errrk4
+print "Not bad!"
+let x = xnew
+let y = ynew
+let m1 = func(x,y)
+let x1 = x + .1
+let y1 = y + .1*m1
+window #1
+plot x,y;
+plot x1,y1
+pause 2
+let x1 = x + deltax/2
+let y1 = y + m1*deltax/2
+plot x1-.015,y1+.01;
+plot x1+.015,y1-.01
+plot x1+.015,y1+.01;
+plot x1-.015,y1-.01
+pause 2
+let m2 = func(x1,y1)
+plot x1-.1,y1-.1*m2;
+plot x1+.1,y1+.1*m2
+pause 2
+let x2 = x + deltax/2
+let y2 = y + m2*deltax/2
+plot x2-.015,y2+.01;
+plot x2+.015,y2-.01
+plot x2+.0115,y2+.01;
+plot x2-.015,y2-.01
+pause 2
+let m3 = func(x2,y2)
+plot x2-.1,y2-.1*m3;
+plot x2+.1,y2+.1*m3
+pause 2
+let x3 = x + deltax
+let y3 = y + deltax*m3
+plot x3-.015,y3+.01;
+plot x3+.015,y3-.01
+plot x3+.015,y3+.01;
+plot x3-.015,y3-.01
+pause 2
+let m4 = func(x3,y3)
+plot x3-.1,y3-.1*m4;
+plot x3+.1,y3+.1*m4
+pause 2
+let slope = (m1 + 2*m2 +2*m3 + m4)/6
+let xnew = x + deltax
+let ynew = y + deltax*slope
+plot x,y;
+plot xnew,ynew
+box area xnew-.01,xnew+.01,ynew-.005,ynew+.005
+pause 2
+window #2
+print "Results at x = 2"
+let yexact = .2
+let errrk4 = yexact - ynew
+print " Exact value: y = ";yexact
+print " RK-4  value: y = ";ynew;" Æy = ";errrk4
+print "Not bad!"
+pause 2
+print "That's all folks."
+
+end
+!
+def func(x,y)
+    let func = -2*x*y^2
+end def
+!
+sub slprint(slope,x,y,i)
+    plot x,y;
+    let xend = x + .08
+    let yend = y + .08*slope
+    plot xend,yend
+    if i = 1 then
+      plot text, at 0,1.03: "Evaluate slope"
+    end if
+    if i <> 1 then
+      plot text, at x-.3,y-.05: "Evaluate slope"
+    end if
+end sub
+!
+sub exact
+  call axes
+  plot text, at 2,1.4: "Exact solution"
+  ask color printcolor$
+  set color "red"
+  for i = 1 to 101
+    let x = (i-1)/20
+    let y = 1/(x^2 + 1)
+    plot x,y;
+  next i
+  plot
+  set color printcolor$
+end sub
+!
+sub axes
+  plot 0,.15;
+  plot 5,.15
+  plot 0,-.2;
+  plot 0,1.2
+  for i = 1 to 5
+    plot i/2,.15;
+    plot i/2,.16
+   next i
+  plot text, at .98,.12: "1"
+  plot text, at 1.98,.12: "2"
+  plot text, at .46,.12: "1/2"
+  plot text, at 1.46,.12: "3/2"
+  for i = 1 to 5
+    plot 0,i/5;
+    plot .02,i/5
+  next i
+  plot text, at -0.05,.99: "1"
+  plot text, at -0.08,.79: "0.8"
+  plot text, at -0.08,.59: "0.6"
+  plot text, at -0.08,.39: "0.4"
+  plot text, at -0.08,.19: "0.2"
+  plot text, at -.08,1.05: "y"
+  plot text, at 2.04,.11: "x"
+end sub

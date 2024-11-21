@@ -1,0 +1,4 @@
+For Problem 6 on PS #1, you may assume that the pendulum starts out as
+stationary (i.e., not in motion initially). I hope to have the physics
+clinic going for next week, but it is not yet up and running for this
+week. I'll keep you up to date.

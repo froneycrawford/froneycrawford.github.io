@@ -1,0 +1,10 @@
+In today's lecture, I botched a derivation in which I was trying to
+justify the relativistic momentum expression. This is basically just
+the example on p. 1059 of Hecht (in Section 26.9), so you can refer to
+that if you like.
+
+Also, regarding the mass-to-energy transformation question as applied
+to the relativistic KE, since KE depends on mass, an increase in mass
+will correspond to an increase in KE (and also an increase in rest
+energy, and therefore an increase in the total relativistic energy,
+which is the sum of KE and the rest energy).

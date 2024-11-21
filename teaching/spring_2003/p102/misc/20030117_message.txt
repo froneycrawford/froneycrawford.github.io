@@ -1,0 +1,3 @@
+To better accomodate the size of various classes, Physics 102 will
+meet in H109 (large lecture room) despite what is says in the course
+guide.

@@ -1,0 +1,14 @@
+Just a point of clarification regarding an example we did in class in
+which a wire loop undergoing a change in magnetic flux was connected
+to a capacitor circuit. We calculated the charge on the capacitor
+during the change in flux by considering the emf produced and the
+voltage across the capacitor. However, a question arose about whether
+the charge would take time to build, and how this would affect the
+value we calculated. The short of it is that most of the charge builds
+on the capacitor after a time equal to the characteristic time, which
+equals RC. I didn't specify an R in the problem, but we can imagine
+that it would be quite small since the wire has little resistance. So
+it takes very little time indeed for us to reach the charge value we
+calculated. In the ideal limit in which the wire has no resistance, RC
+= 0 and the charge builds up in zero time.
+

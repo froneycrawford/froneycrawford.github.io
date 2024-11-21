@@ -1,0 +1,56 @@
+Some notes on Midterm #1, which is on Wednesday Feb 18. 
+
+I will hand out a sheet this Friday in class with some of the basic
+info (policies, advice, etc). This sheet is the cover sheet on the
+exam, so you know what you will be given.
+
+You may use one side of a 8.5 x 11 inch piece of paper for
+equations. No drawings allowed.
+
+The only way you can miss the exam is with a DEAN'S EXCUSE. Also,
+don't be late to the exam! I will make sure we kick the other class
+out and start the exam on time.
+
+The exam will cover material from Hecht Ch. 26 and 15.
+
+The exam will cover material from HW #1 through #4, but not the Ch. 16
+stuff on HW #4. Some graded problem sets are available for you to pick
+up in the box outside my office. Solutions for the problem sets are
+also be posted for you to use in studying.
+
+Midterm #1 from last year and the year before are both posted on the
+web site with solutions. Use it for practice and to get a feel for
+what kinds of questions I might ask. Note that the oscillations stuff
+will be replaced with relativity.
+
+We will have a review session on Monday Feb 17 from 6-7 p.m. in
+H109. Please come with questions.
+
+I handed out some practice problems in class which were given as
+recitation exercises in previous years.
+
+Also, below I have posted some suggested practice problems (with
+answers) from Ch. 26 and 15 of Hecht.
+
+CHAPTER 26:
+
+10 1.25 hr
+22 10 ly
+25 0.436 c
+28 8.00 m/s
+50 0.3005
+62 0.6 MeV
+64 2.26e-10 J = 1.41 GeV
+68 2.598 MeV/c
+74 0.68 MeV/c
+
+CHAPTER 15: 
+
+20 112 N y-hat
+24 0.3 micro-N x-hat
+46 11 N/C x-hat
+55 (2.0 x-hat + 0.82 y-hat) kN/C 
+58 89.9 N/C 
+85 Q/(2*pi*R*e_0*L*K_e)
+94 0
+100 Q/(4*pi*e_0*r^2) 

@@ -1,0 +1,72 @@
+Here is some of the exam info I went over in class today.
+
+The exam lasts up to 5 hrs, which means you can have that much time if
+you need it. I am hoping it wont take nearly that long.
+
+There are 12 problems, which are a mixture of qualitative answer
+questions, short calculations, and more involved calculations. The
+longer calculation problems are a little less involved than the
+midterm problems you saw.
+
+I will print the exam with one problem per sheet, so do all of you
+work to be handed in on those sheets.
+
+You can have two 8.5 x 11 sheets to write equations, constants,
+etc. on. You can use both sides of the sheets.
+
+I will have each exam in my office (Stokes 111) in an envelope for you
+to pick up and take it where you want to. In order to pick up the
+exam, you must turn in an evaluation sheet to the folder marked P102
+in my office. I will remind you on the exam to write your address
+where you will be in early summer so I can mail you the exam and your
+grade. When you are done with the exam, return it to my office or
+mailbox in Stokes. You can pick the exam up Mon 5/6 through Fri 5/10
+or Mon 5/13 through Fri 5/17 during normal hours. If you want to take
+it over the weekend, pick up on Fri /5/10. All exams are due 4 pm Fri
+5/17, so don't wait until the last minute. SENIORS: you must complete
+the exam by Fri 5/10 since senior grades are due 5/13.
+
+The exam covers Ch 22, 23, 24, 25, 21, 27, 28, and 29 in Hecht. Be
+sure to concentrate on the sub-chapters that we covered in class (see
+Course Schedule). The lectures covered are from 3/25 through
+5/1. Problem sets covered are from PS #9 to PS #13.
+
+A summary of the topics to study: 
+
+EM waves, origins of radiation, E and B fields 
+Plane waves, propagation of EM waves
+Irradiance, relation to E-field amplitude
+Energy quanta, photons, energy of photons, energy transfer
+Atomic scattering and absorption
+EM spectrum, Rayleigh scattering
+Reflection, law of reflection 
+Refraction, dispersion, index of refraction
+Snell's Law, total internal reflection 
+Geometric optics, lenses, spherical lenses 
+Focal points and focal lengths, images/objects,
+Converging and diverging lenses
+Combination lenses, lens power, mirrors
+Physical optics, polarization
+Linear and circular polarization
+Polarizers, Malus's Law
+Reflected polarized light, Brewster's angle
+Wave interference, Young's double slit experiment
+Fringe patterns, diffraction by single slit
+diffraction gratings, circular apertures, Airy disk
+spatial resolution
+AC circuits, L, C, and R, effective V and I 
+Reactance, Impedance, real and apparent power
+phasor diagrams, impedance triangle
+AC circuit resonance
+Radioactivity, alpha, beta, gamma, X-rays
+Rutherford scattering, atomic spectra, hydrogen series
+Blackbody radiation, Wien's displacement law
+Photoelectric effect, work function, stopping potential
+Bohr atom, energy levels and radii, lasers
+de Broglie waves, wave nature of matter
+Schroedingers equation, wavefunction
+Probability, quantum numbers, Zeeman effect,
+Electron spin, Pauli Exclusion Principle
+Uncertainty principle
+
+That's a lot!

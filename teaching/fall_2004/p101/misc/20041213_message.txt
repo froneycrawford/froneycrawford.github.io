@@ -1,0 +1,49 @@
+Here are some practice exam problems from the book for the final
+exam. I have included numerical answers next to each problem so you can
+check your work.
+
+Ch. 9
+
+34  3.0e5 Pa
+47  -1.1e4 Pa
+83  21.5, 3e-8 cubic meters
+89  4.6e3 N, 0.15 m 
+93  -27 kPa
+109 82 m/s 
+
+Ch. 12 
+
+30  173e-6
+68  2.6e5 Pa
+76  2.5e23
+97  0.147 MJ
+
+Ch. 13
+
+21  1.9 h
+32  79.7 deg. C
+39  -0.18 MCal 
+68  2711 kJ
+84  0.15 kg
+95  2.3 m
+
+Ch. 14
+
+19  0.2 kJ
+44  7.1e4 kPa, 3.3e3 K
+63  435 kJ 
+73  6.5
+78  -2.54 J/K 
+
+Ch. 26
+
+14  8 m
+19  0.436 m
+25  0.436c 
+33  0.96c
+46  4.73e-22
+60  1.26e12 J
+66  0.852 MeV
+68  2.6 Mev/c
+
+
